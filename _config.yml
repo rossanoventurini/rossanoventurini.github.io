@@ -1,1 +1,13 @@
-theme: jekyll-theme-minimal
+title: Rossano Venturini
+email: rossano.venturini@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Rossano Venturini's personal web page
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  rossanoventurini
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
