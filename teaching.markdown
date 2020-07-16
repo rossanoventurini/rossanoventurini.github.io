@@ -1,0 +1,23 @@
+---
+layout: page
+title: Teaching
+permalink: /teaching/
+---
+
+- [Competitive Programming and Contests](https://github.com/rossanoventurini/CompetitiveProgramming) [**English**]
+  - Dipartimento di Informatica, Università di Pisa
+  - a.a. 2019/20, 2018/19, and 2017/18
+- [Algoritmica e Laboratorio](http://didawiki.cli.di.unipi.it/doku.php/informatica/all-a/start) [**Italian**]
+  - Dipartimento di  Informatica, Università di Pisa
+  - a.a. 2019/20, 2018/19, 2017/18, 2016/17, 2015/16, 2014/2015, 2013/2014, 2012/2013 e 2011/2012)
+- [Master in Big Data Analytics & Social Mining](http://pages.di.unipi.it/rossano/221-2/introduction-to-python/) [**Italian**]
+  - Dipartimento di Informatica, Università di Pisa.
+  - a.a. 2017/18, 2016/17 e 2015/16
+- Laboratory on Algorithms for Big Data [**English**]
+  - Dipartimento di Informatica, Università di Pisa.
+  - a.a. 2016/17, 2015/16, and 2014/2015
+- Master OPEN per Esperto di Smart City [**Italian**]
+  - a.a. 2015/16
+- Fondamenti di Informatica II: Algoritmi e Strutture Dati [**Italian**]
+  - Dipartimento di Ingegneria dell’Informazione, Università di Pisa
+  - a.a. 2014/15
