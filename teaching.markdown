@@ -12,7 +12,7 @@ permalink: /teaching/
   - Dipartimento di  Informatica, Università di Pisa
   - a.a. 2019/20, 2018/19, 2017/18, 2016/17, 2015/16, 2014/2015, 2013/2014, 2012/2013 e 2011/2012)<br><br>
 
-- [Master in Big Data Analytics & Social Mining](http://pages.di.unipi.it/rossano/221-2/introduction-to-python/) [**Italian**]
+- Master in Big Data Analytics & Social Mining [**Italian**]
   - Dipartimento di Informatica, Università di Pisa.
   - a.a. 2017/18, 2016/17 e 2015/16<br><br>
 
