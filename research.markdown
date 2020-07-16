@@ -9,7 +9,7 @@ permalink: /research/
 # Conferences
 
 # PhD Thesis
--  R. Venturini. [**On searching and extracting strings from compressed textual data**](/papers/PHDTHESIS10.pdf). University of Pisa. Supervisor: Paolo Ferragina. 2010. 
+-  R. Venturini. [*On searching and extracting strings from compressed textual data*](/papers/PHDTHESIS10.pdf). University of Pisa. Supervisor: Paolo Ferragina. 2010. 
 
 # Tutorials
 - [Succinct Data Structures in Information Retrieval: Theory and Practice](/papers/TUTORIAL@SIGIR2016.pdf). Full-day tutorial at [ACM Sigir 2016](http://sigir.org/sigir2016/) with [Simon Gog](https://algo2.iti.kit.edu/gog/)
