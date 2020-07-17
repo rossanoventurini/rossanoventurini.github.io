@@ -45,7 +45,7 @@ def get_entry(k, data):
     year = data.fields['year']
     doi_link = ""
     try:
-        doi_link = "https://doi.org/{})".format(data.fields['doi'])
+        doi_link = "https://doi.org/{}".format(data.fields['doi'])
     except:
         pass
     string = "- " + authors + "."
