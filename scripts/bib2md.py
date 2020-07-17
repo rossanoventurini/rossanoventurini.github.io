@@ -7,6 +7,9 @@ output_filename = "../research.markdown"
 journals_bib = '../bibs/journals.bib'
 conferences_bib = "../bibs/conferences.bib"
 
+
+# TODO:
+
 def get_author(person):
     first = ""
     l = str(person).split(",")
@@ -25,14 +28,20 @@ def get_authors(persons):
     return authors
 
 def clean_text(text):
+    text = text.replace("{\'a}", "à").replace("{\'e}", "é")
     return text.replace("{", "").replace("}", "")
 
 
 def get_entry(k, data):
     #print(data)
     pdf_link =  "{}{}.pdf".format(papers_dir, k)
-    authors = get_authors(data.persons['author'])
+    authors = clean_text(get_authors(data.persons['author']))
     title = clean_text(data.fields['title'])
+    note = None
+    try:
+        note = data.fields['note']
+    except:
+        pass
     journal = ""
     try:
         journal = clean_text(data.fields['journal'])
@@ -50,8 +59,10 @@ def get_entry(k, data):
         pass
     string = "- " + authors + "."
     string += "<br>" + "[*{}*]({}).".format(title, pdf_link)
-    string += "<br>" + "{}.".format(journal)
+    string += "<br>" + "{},".format(journal)
     string += " " + "{}.".format(year)
+    if note:
+        string += " " + "**" + note + "**"
     if len(doi_link):
         string += "<br>" + "[\[DOI\]](" + doi_link + ")"
     return (int(year), string)
@@ -64,7 +75,7 @@ def get_biblio_render(bib_filename):
                      sorted([get_entry(k, data) for k, data in bib_data.entries.items()], reverse = True))
 
 
-template_text = open(template_filename, "r").read()
+template_text = open(template_filename, "r").read().replace("###Remove_me", "")
 
 journals = get_biblio_render(journals_bib)
 conferences = get_biblio_render(conferences_bib)
