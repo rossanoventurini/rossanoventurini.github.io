@@ -35,6 +35,8 @@ def clean_text(text):
 def get_entry(k, data):
     #print(data)
     pdf_link =  "{}{}.pdf".format(papers_dir, k)
+    is_pdf = os.path.isfile(".."+ papers_dir + k + ".pdf")
+
     authors = clean_text(get_authors(data.persons['author']))
     title = clean_text(data.fields['title'])
     note = None
@@ -57,10 +59,13 @@ def get_entry(k, data):
         doi_link = "https://doi.org/{}".format(data.fields['doi'])
     except:
         pass
-    string = "- " + authors + "."
-    string += "<br>" + "[*{}*]({}).".format(title, pdf_link)
+    string = "- " + authors
+    if is_pdf:
+        string += "<br>" + "[*{}*]({})".format(title, pdf_link)
+    else:
+        string += "<br>" + "*{}*".format(title)
     string += "<br>" + "{},".format(journal)
-    string += " " + "{}.".format(year)
+    string += " " + "{}".format(year)
     if note:
         string += " " + "**" + note + "**"
     if len(doi_link):
