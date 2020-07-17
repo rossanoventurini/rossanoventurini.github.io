@@ -34,7 +34,8 @@ def clean_text(text):
 
 def get_entry(k, data):
     #print(data)
-    pdf_link =  "{}{}.pdf".format(papers_dir, k)
+    pdf_file =  "{}{}.pdf".format(papers_dir, k)
+    pdf_link = "[![.pdf](/imgs/pdf.png)]({})".format(pdf_file)
     is_pdf = os.path.isfile(".."+ papers_dir + k + ".pdf")
 
     authors = clean_text(get_authors(data.persons['author']))
@@ -59,17 +60,26 @@ def get_entry(k, data):
         doi_link = "https://doi.org/{}".format(data.fields['doi'])
     except:
         pass
-    string = "- " + authors
+    string = "- "
+
+    string += authors
     if is_pdf:
-        string += "<br>" + "[*{}*]({})".format(title, pdf_link)
+        string += "<br>" + "[*{}*]({})".format(title, pdf_file)
     else:
         string += "<br>" + "*{}*".format(title)
     string += "<br>" + "{},".format(journal)
     string += " " + "{}".format(year)
     if note:
         string += " " + "**" + note + "**"
+    extra = []
+
     if len(doi_link):
-        string += "<br>" + "[\[DOI\]](" + doi_link + ")"
+        extra.append( "[![doi](/imgs/doi.png)]({})".format(doi_link))
+    if is_pdf:
+        extra.append(pdf_link + " ")
+    if len(extra):
+        string += "<br>" + " ".join(extra)
+
     return (int(year), string)
 
 def get_biblio_render(bib_filename):
