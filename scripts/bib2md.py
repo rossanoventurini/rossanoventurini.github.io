@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: latin-1 -*-
+
 from pybtex.database.input import bibtex
 import os.path
 
@@ -54,7 +57,11 @@ def get_entry(k, data):
         journal = clean_text(data.fields['booktitle'])
     except:
         pass
-    year = data.fields['year']
+    year = 2000
+    try:
+        year = data.fields['year']
+    except:
+        print(k, "year is missing")
     doi_link = ""
     try:
         doi_link = "https://doi.org/{}".format(data.fields['doi'])
