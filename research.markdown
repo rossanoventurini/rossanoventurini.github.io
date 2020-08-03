@@ -5,6 +5,7 @@ permalink: /research/
 ---
 
 # Journals
+- G. E. Pibiri and R. Venturini<br>[*Techniques for Inverted Index Compression*](/papers/CSUR20.pdf)<br>ACM Computing Surveys (CSUR), 2020<br>[![doi](/imgs/doi.png)](https://doi.org/--) [![.pdf](/imgs/pdf.png)](/papers/CSUR20.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*On Optimally Partitioning Variable-Byte Codes*](/papers/TKDE19.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1109/TKDE.2019.2911288) [![.pdf](/imgs/pdf.png)](/papers/TKDE19.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*Handling Massive N-Gram Datasets Efficiently*](/papers/TOIS19.pdf)<br>ACM Transactions on Information Systems (TOIS), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1145/3302913) [![.pdf](/imgs/pdf.png)](/papers/TOIS19.pdf) 
 - A. Farruggia, P. Ferragina, A. Frangioni, and R. Venturini<br>[*Bicriteria Data Compression*](/papers/SICOMP19.pdf)<br>SIAM Journal on Computing (SICOMP), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1137/17M1121457) [![.pdf](/imgs/pdf.png)](/papers/SICOMP19.pdf) 
