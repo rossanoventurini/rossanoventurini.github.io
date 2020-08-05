@@ -5,6 +5,7 @@ permalink: /research/
 ---
 
 # Journals
+- R. Perego, G. E. Pibiri, and R. Venturini<br>[*Compressed Indexes for Fast Search of Semantic Data*](/papers/TKDE20.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2020<br>[![.pdf](/imgs/pdf.png)](/papers/TKDE20.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*Techniques for Inverted Index Compression*](/papers/CSUR20.pdf)<br>ACM Computing Surveys (CSUR), 2020<br>[![.pdf](/imgs/pdf.png)](/papers/CSUR20.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*On Optimally Partitioning Variable-Byte Codes*](/papers/TKDE19.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1109/TKDE.2019.2911288) [![.pdf](/imgs/pdf.png)](/papers/TKDE19.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*Handling Massive N-Gram Datasets Efficiently*](/papers/TOIS19.pdf)<br>ACM Transactions on Information Systems (TOIS), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1145/3302913) [![.pdf](/imgs/pdf.png)](/papers/TOIS19.pdf) 
