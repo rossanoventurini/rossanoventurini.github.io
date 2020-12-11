@@ -24,7 +24,7 @@ Telegram: rossanoventurini<br>
 <br><br>
 **PC co-chair** (with Gabriele Fici and Marinella Sciortino) of the 24th edition of the International Symposium on String Processing and Information Retrieval, SPIRE 2017.
 
-**Program Committees**: EMNLP-CoNLL'12, CIKM'12,  WSDM'13, CPM'13, CIKM'13, WSDM'14, ESA'14, PODS'15, IIR'15, SIGIR'15, SPIRE'15, AAIM'16, IIR'16, SIGIR'16, WSDM'17, WWW'17,  SEA'17, SIGIR'17, IIR'17, WWW'18, SIGIR'19, and SPIRE'20.
+**Program Committees**: EMNLP-CoNLL'12, CIKM'12,  WSDM'13, CPM'13, CIKM'13, WSDM'14, ESA'14, PODS'15, IIR'15, SIGIR'15, SPIRE'15, AAIM'16, IIR'16, SIGIR'16, WSDM'17, WWW'17,  SEA'17, SIGIR'17, IIR'17, WWW'18, SIGIR'19, SPIRE'20, SIGIR'21 and ESA'21.
 
 # Awards
 - Best paper award at SIGIR 2015: 38th international ACM SIGIR conference on research & development in Information Retrieval
