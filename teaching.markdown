@@ -6,7 +6,11 @@ permalink: /teaching/
 
 - [Competitive Programming and Contests](https://github.com/rossanoventurini/CompetitiveProgramming) [**English**]
   - Dipartimento di Informatica, Università di Pisa
-  - a.a. 2019/20, 2018/19, and 2017/18<br><br>
+  - a.a. 2020/21, 2019/20, 2018/19, and 2017/18<br><br>
+
+- [Algorithms and Data Structures (for Data Science)](https://github.com/rossanoventurini/adsds) [**English**]
+    - Dipartimento di Informatica, Università di Pisa
+    - a.a. 2020/21<br><br>
 
 - [Algoritmica e Laboratorio](http://didawiki.cli.di.unipi.it/doku.php/informatica/all-a/start) [**Italian**]
   - Dipartimento di  Informatica, Università di Pisa
