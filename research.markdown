@@ -5,9 +5,9 @@ permalink: /research/
 ---
 
 # Journals
+- G. E. Pibiri and R. Venturini<br>[*Techniques for Inverted Index Compression*](/papers/CSUR21.pdf)<br>ACM Computing Surveys (CSUR), 2021<br>[![doi](/imgs/doi.png)](https://doi.org/10.1145/3415148) [![.pdf](/imgs/pdf.png)](/papers/CSUR21.pdf) 
+- G. E. Pibiri and R. Venturini<br>[*Practical trade‐offs for the prefix‐sum problem*](/papers/SPE21.pdf)<br>Journal of Software: Practice and Experience (SPE), 2021<br>[![doi](/imgs/doi.png)](https://doi.org/10.1002/spe.2918) [![.pdf](/imgs/pdf.png)](/papers/SPE21.pdf) 
 - R. Perego, G. E. Pibiri, and R. Venturini<br>[*Compressed Indexes for Fast Search of Semantic Data*](/papers/TKDE20.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2020<br>[![.pdf](/imgs/pdf.png)](/papers/TKDE20.pdf) 
-- G. E. Pibiri and R. Venturini<br>[*Techniques for Inverted Index Compression*](/papers/CSUR20.pdf)<br>ACM Computing Surveys (CSUR), 2020<br>[![.pdf](/imgs/pdf.png)](/papers/CSUR20.pdf) 
-- G. E. Pibiri and R. Venturini<br>[*Practical trade‐offs for the prefix‐sum problem*](/papers/SPE20.pdf)<br>Journal of Software: Practice and Experience (SPE), 2020<br>[![doi](/imgs/doi.png)](https://doi.org/10.1002/spe.2918) [![.pdf](/imgs/pdf.png)](/papers/SPE20.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*On Optimally Partitioning Variable-Byte Codes*](/papers/TKDE19.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1109/TKDE.2019.2911288) [![.pdf](/imgs/pdf.png)](/papers/TKDE19.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*Handling Massive N-Gram Datasets Efficiently*](/papers/TOIS19.pdf)<br>ACM Transactions on Information Systems (TOIS), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1145/3302913) [![.pdf](/imgs/pdf.png)](/papers/TOIS19.pdf) 
 - F. Lettich, C. Lucchese, F. M. Nardini, S. Orlando, R. Perego, N. Tonellotto, and R. Venturini<br>[*Parallel Traversal of Large Ensembles of Decision Trees*](/papers/ITPDS19.pdf)<br>IEEE Transactions on Parallel and Distributed Systems (ITPDS), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1109/TPDS.2018.2860982) [![.pdf](/imgs/pdf.png)](/papers/ITPDS19.pdf) 
@@ -27,6 +27,7 @@ permalink: /research/
 
 # Conferences
 - R. Perego, G. E. Pibiri, and R. Venturini<br>[*Compressed Indexes for Fast Search of Semantic Data*](/papers/ICDE21.pdf)<br>ICDE 2021: Proceedings of the 37th IEEE International Conference on Data Engineering, 2021<br>[![doi](/imgs/doi.png)](https://doi.org/) [![.pdf](/imgs/pdf.png)](/papers/ICDE21.pdf) 
+- N. P. Giuseppe F. Italiano and R. Venturini<br>[*Compressed Weighted de Bruijn Graphs*](/papers/CPM21.pdf)<br>CPM 2021: Proceedings of the 32nd Symposium on Combinatorial Pattern Matching, 2021<br>[![.pdf](/imgs/pdf.png)](/papers/CPM21.pdf) 
 - S. Gog, G. E. Pibiri, and R. Venturini<br>[*Efficient and Effective Query Auto-Completion*](/papers/SIGIR20.pdf)<br>SIGIR 2020: Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval, 2020<br>[![doi](/imgs/doi.png)](https://doi.org/10.1145/3397271.3401432) [![.pdf](/imgs/pdf.png)](/papers/SIGIR20.pdf) 
 - L. Beretta, F. M. Nardini, R. Trani, and R. Venturini<br>[*An Optimal Algorithm to Find Champions of Tournament Graphs*](/papers/SPIRE19A.pdf)<br>SPIRE 2019: Proceedings of the 26th International Symposium on String Processing and Information Retrieval, 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1007/978-3-030-32686-9\_19) [![.pdf](/imgs/pdf.png)](/papers/SPIRE19A.pdf) 
 - F. M. Nardini, R. Trani, and R. Venturini<br>[*Fast Approximate Filtering of Search Results Sorted by Attribute*](/papers/SIGIR19.pdf)<br>SIGIR 2019: Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval, 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1145/3331184.3331227) [![.pdf](/imgs/pdf.png)](/papers/SIGIR19.pdf) 
