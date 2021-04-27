@@ -5,10 +5,10 @@ permalink: /research/
 ---
 
 # Journals
+- R. Perego, G. E. Pibiri, and R. Venturini<br>[*Compressed Indexes for Fast Search of Semantic Data*](/papers/TKDE21.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2021<br>[![.pdf](/imgs/pdf.png)](/papers/TKDE21.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*Techniques for Inverted Index Compression*](/papers/CSUR21.pdf)<br>ACM Computing Surveys (CSUR), 2021<br>[![doi](/imgs/doi.png)](https://doi.org/10.1145/3415148) [![.pdf](/imgs/pdf.png)](/papers/CSUR21.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*Practical trade‐offs for the prefix‐sum problem*](/papers/SPE21.pdf)<br>Journal of Software: Practice and Experience (SPE), 2021<br>[![doi](/imgs/doi.png)](https://doi.org/10.1002/spe.2918) [![.pdf](/imgs/pdf.png)](/papers/SPE21.pdf) 
-- R. Perego, G. E. Pibiri, and R. Venturini<br>[*Compressed Indexes for Fast Search of Semantic Data*](/papers/TKDE20.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2020<br>[![.pdf](/imgs/pdf.png)](/papers/TKDE20.pdf) 
-- G. E. Pibiri and R. Venturini<br>[*On Optimally Partitioning Variable-Byte Codes*](/papers/TKDE19.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1109/TKDE.2019.2911288) [![.pdf](/imgs/pdf.png)](/papers/TKDE19.pdf) 
+- G. E. Pibiri and R. Venturini<br>[*On Optimally Partitioning Variable-Byte Codes*](/papers/TKDE20.pdf)<br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2020<br>[![doi](/imgs/doi.png)](https://doi.org/10.1109/TKDE.2019.2911288) [![.pdf](/imgs/pdf.png)](/papers/TKDE20.pdf) 
 - G. E. Pibiri and R. Venturini<br>[*Handling Massive N-Gram Datasets Efficiently*](/papers/TOIS19.pdf)<br>ACM Transactions on Information Systems (TOIS), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1145/3302913) [![.pdf](/imgs/pdf.png)](/papers/TOIS19.pdf) 
 - F. Lettich, C. Lucchese, F. M. Nardini, S. Orlando, R. Perego, N. Tonellotto, and R. Venturini<br>[*Parallel Traversal of Large Ensembles of Decision Trees*](/papers/ITPDS19.pdf)<br>IEEE Transactions on Parallel and Distributed Systems (ITPDS), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1109/TPDS.2018.2860982) [![.pdf](/imgs/pdf.png)](/papers/ITPDS19.pdf) 
 - A. Farruggia, P. Ferragina, A. Frangioni, and R. Venturini<br>[*Bicriteria Data Compression*](/papers/SICOMP19.pdf)<br>SIAM Journal on Computing (SICOMP), 2019<br>[![doi](/imgs/doi.png)](https://doi.org/10.1137/17M1121457) [![.pdf](/imgs/pdf.png)](/papers/SICOMP19.pdf) 
