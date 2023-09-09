@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - rossanoventurini
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - rossanoventurini/qwt
+  - rossanoventurini/adsds
+  - rossanoventurini/CompetitiveProgramming
+  - rossanoventurini/Variable-BMW

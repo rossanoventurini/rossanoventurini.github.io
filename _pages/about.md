@@ -1,26 +1,46 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle:
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: me.png
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  address:
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false  # includes a list of news items
+latest_posts: false  # includes a list of the newest posts
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+#### Associate professor
+*<a href='https://di.unipi.it/en'>Department of Computer Science</a>*<br>
+*<a href='https://unipi.it/en'>University of Pisa</a>*<br>
+Largo Bruno Pontecorvo 3, I-56127 Pisa, Italy.<br>
+Room: 361
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am an Associate Professor at the Computer Science Department, University of Pisa. I received the PhD degree from the University of Pisa, in 2010. My research interests mainly focus on designing and analyzing algorithms and data structures for large datasets with applications in Information Retrieval and Machine Learning.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I love algorithms, data structures, low-level code optimizations, and Rust, often all together at the same time.
+
+
+### Awards
+- Best paper award at SIGIR 2015: 38th international ACM SIGIR conference on research & development in Information Retrieval
+- Best paper award at SIGIR 2014: 37th international ACM SIGIR conference on research & development in Information Retrieval
+- Yahoo Faculty Research and Engagement Program award ([FREP](https://research.yahoo.com/news/faculty-research-and-engagement-program-2014-recipients-selected/)), 2014
+- Three Best Young Research (under 35) awards at the I.S.T.I. "A. Faedo" – C.N.R. (2011, 2013 e 2014)
+- Best Italian PhD Thesis in Theoretical Computer Science of the [Italian Chapter of EATCS](http://www.eatcs.org/index.php/italian-chapter), 2012
+
+### Patents
+- *A method to rank documents by a computer, using additive ensembles of regression trees and cache optimization, and search engine using such a method.*  Co-authored by D. Dato, C. Lucchese, F.M. Nardini, S. Orlando, R. Perego, N. Tonellotto. Owned by Tiscali S.p.A.
+- *System and method for string processing and searching using a compressed permuterm index.* Number US 2009/0063465 A1 of 5 March 2009. Co-authored by P. Ferragina. Owned by Yahoo! Inc. U.S. 
+
+### Service
+**PC co-chair** (with Franco Maria Nardini and Nadia Pisanti) of the 30th edition of the International Symposium on String Processing and Information Retrieval, SPIRE 2023.
+
+**PC co-chair** (with Gabriele Fici and Marinella Sciortino) of the 24th edition of the International Symposium on String Processing and Information Retrieval, SPIRE 2017.
+
+**Program Committees**: EMNLP-CoNLL'12, CIKM'12,  WSDM'13, CPM'13, CIKM'13, WSDM'14, ESA'14, PODS'15, IIR'15, SIGIR'15, SPIRE'15, AAIM'16, IIR'16, SIGIR'16, WSDM'17, WWW'17,  SEA'17, SIGIR'17, IIR'17, WWW'18, SIGIR'19, SPIRE'20, SIGIR'21, ESA'21, and SIGIR'22.
