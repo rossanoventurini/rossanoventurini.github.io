@@ -17,8 +17,8 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 #### Associate professor
-*<a href='https://di.unipi.it/en'>Department of Computer Science</a>*<br>
-*<a href='https://unipi.it/en'>University of Pisa</a>*<br>
+*<a href='https://di.unipi.it/en'>Dipartimento di Informatica</a>*<br>
+*<a href='https://unipi.it/en'>Università di Pisa</a>*<br>
 Largo Bruno Pontecorvo 3, I-56127 Pisa, Italy.<br>
 Room: 361
 
