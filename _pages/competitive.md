@@ -85,12 +85,12 @@ I strongly suggest you to watch the following video lectures as soon as possible
 
 <br>
 #### References
-*   Introduction to Algorithms,  3rd Edition, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, The MIT Press, 2009 ([Amazon](http://www.amazon.com/Introduction-Algorithms-3rd-Thomas-Cormen/dp/0262033844/ref=sr_1_1?s=books&ie=UTF8&qid=1443160441&sr=1-1&keywords=introduction+to+algorithms)) [CCLR]
-*   Algorithms, 4th Edition, Robert Sedgewick, Kevin Wayne, Addison-Wesley Professional, 2011 ([Amazon](http://www.amazon.com/Algorithms-4th-Edition-Robert-Sedgewick/dp/032157351X/ref=pd_sim_14_2?ie=UTF8&refRID=1A2NFN935EST0ZQARB6H&dpID=51UDgHU9z9L&dpSrc=sims&preST=_AC_UL160_SR130%2C160_)) [RS]
-*   Algorithms, Sanjoy Dasgupta, Christos Papadimitriou, Umesh Vazirani, McGraw-Hill, 2006\. ([Amazon](http://www.amazon.com/Algorithms-Sanjoy-Dasgupta/dp/0073523402)) [DPZ]
-*   Programming Challenges: The Programming Contest Training Manual, Steven S. Skiena, Miguel A. Revilla, Springer, 2003 ([Amazon](http://www.amazon.com/Programming-Challenges-Contest-Training-Computer/dp/0387001638)) [SR]
-*   Competitive Programming 4: The New Lower Bound of Programming Contests, Steven Halim, Felix Halim, ([here](https://cpbook.net/)) [HH]
-*   Guide to Competitive Programming: Learning and Improving Algorithms Through Contests. Second Edition, Antti Laaksonen,  Springer, 2020 ([here](https://www.springer.com/gp/book/9783030393564)) [L]
+* Introduction to Algorithms,  3rd Edition, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, The MIT Press, 2009 ([Amazon](http://www.amazon.com/Introduction-Algorithms-3rd-Thomas-Cormen/dp/0262033844/ref=sr_1_1?s=books&ie=UTF8&qid=1443160441&sr=1-1&keywords=introduction+to+algorithms)) [CCLR]
+* Algorithms, 4th Edition, Robert Sedgewick, Kevin Wayne, Addison-Wesley Professional, 2011 ([Amazon](http://www.amazon.com/Algorithms-4th-Edition-Robert-Sedgewick/dp/032157351X/ref=pd_sim_14_2?ie=UTF8&refRID=1A2NFN935EST0ZQARB6H&dpID=51UDgHU9z9L&dpSrc=sims&preST=_AC_UL160_SR130%2C160_)) [RS]
+* Algorithms, Sanjoy Dasgupta, Christos Papadimitriou, Umesh Vazirani, McGraw-Hill, 2006\. ([Amazon](http://www.amazon.com/Algorithms-Sanjoy-Dasgupta/dp/0073523402)) [DPZ]
+* Programming Challenges: The Programming Contest Training Manual, Steven S. Skiena, Miguel A. Revilla, Springer, 2003 ([Amazon](http://www.amazon.com/Programming-Challenges-Contest-Training-Computer/dp/0387001638)) [SR]
+* Competitive Programming 4: The New Lower Bound of Programming Contests, Steven Halim, Felix Halim, ([here](https://cpbook.net/)) [HH]
+* Guide to Competitive Programming: Learning and Improving Algorithms Through Contests. Second Edition, Antti Laaksonen,  Springer, 2020 ([here](https://www.springer.com/gp/book/9783030393564)) [L]
   
 <br>
 #### Rust References
@@ -98,27 +98,28 @@ I strongly suggest you to watch the following video lectures as soon as possible
   - [Videos](https://www.youtube.com/watch?v=OX9HJsJUDxA&list=PLai5B987bZ9CoVR-QEIN9foz4QCJ0H2Y8)
 * [The Rust Reference](https://doc.rust-lang.org/reference/introduction.html)
 * [The Rust Standard Library](https://doc.rust-lang.org/std/index.html)
+* [Learning Rust](https://learning-rust.github.io/)
 * [Rust users forum](https://users.rust-lang.org/)
 * [Rustlings](https://github.com/rust-lang/rustlings)
 
 <br>
 #### Useful links
-*   Erik D Demaine, Srini Devadas, Nancy Ann Lynch, ["MIT  Design and Analysis of Algorithms"](http://stellar.mit.edu/S/course/6/sp15/6.046J/), MIT Algorithm course which includes video lectures
-*   Tim Roughgarden, "[Algorithm specialization](https://www.coursera.org/specializations/algorithms)", Coursera
-*   [Visualgo](https://visualgo.net/en): visualising data structures and algorithms through animation
-*   Geeks for Geeks: [Company interviews preparation](http://www.geeksforgeeks.org/company-preparation/)
-*   [Interviews common coding questions](http://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/)
-*   How to: Work at Google — Example Coding/Engineering Interview [Video](https://www.youtube.com/watch?v=XKu_SEDAykw)
-*   [Google's Code Jam](https://code.google.com/codejam/)
-*   [Topcoder](https://www.topcoder.com/)
-*   [Codeforces](http://codeforces.com/)
-*   [LeetCode](https://leetcode.com/)
-*   [HackerRank](https://www.hackerrank.com/)
-*   [Geeks for Geeks](http://www.geeksforgeeks.org/)
-*   [LeetCode](https://leetcode.com/)
-*   [CodeChef - Data Structures and Algorithms links](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
+* Erik D Demaine, Srini Devadas, Nancy Ann Lynch, ["MIT  Design and Analysis of Algorithms"](http://stellar.mit.edu/S/course/6/sp15/6.046J/), MIT Algorithm course which includes video lectures
+* Tim Roughgarden, "[Algorithm specialization](https://www.coursera.org/specializations/algorithms)", Coursera
+* [Visualgo](https://visualgo.net/en): visualising data structures and algorithms through animation
+* Geeks for Geeks: [Company interviews preparation](http://www.geeksforgeeks.org/company-preparation/)
+* [Interviews common coding questions](http://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/)
+* How to: Work at Google — Example Coding/Engineering Interview [Video](https://www.youtube.com/watch?v=XKu_SEDAykw)
+* [Google's Code Jam](https://code.google.com/codejam/)
+* [Topcoder](https://www.topcoder.com/)
+* [Codeforces](http://codeforces.com/)
+* [LeetCode](https://leetcode.com/)
+* [HackerRank](https://www.hackerrank.com/)
+* [Geeks for Geeks](http://www.geeksforgeeks.org/)
+* [LeetCode](https://leetcode.com/)
+* [CodeChef - Data Structures and Algorithms links](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
 * Geeks for Geeks: [Top 10 Algorithms and Data Structures for Competitive Programming](http://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
-*   [List](http://codeforces.com/blog/entry/23054) of resources for competitive programming
+* [List](http://codeforces.com/blog/entry/23054) of resources for competitive programming
 
 <br>
 #### Lectures
