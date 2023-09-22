@@ -51,7 +51,7 @@ You have the opportunity to earn additional points through:
 
 It is highly recommended that you implement solutions for the problems presented in each lecture. This practice not only enhances your problem-solving skills but also provides valuable Rust programming experience.
 
-I recommend creating a [github](http://github.com) to centralize all your solutions and their corresponding descriptions. This repository can be set to either private or public visibility, ensuring that I can access it in either case. Please share the repository link with me, and make sure to keep it regularly updated so that I can monitor your progress effectively. This will help streamline the tracking of your work and make collaboration smoother.
+I recommend creating a [Github](http://github.com) repository to centralize all your solutions and their corresponding descriptions. This repository can be set to either private or public visibility, ensuring that I can access it in either case. Please share the repository link with me, and make sure to keep it regularly updated so that I can monitor your progress effectively.
 
 <br>
 #### How to solve a problem
@@ -126,8 +126,8 @@ I strongly suggest you to watch the following video lectures as soon as possible
 
 | Date | Lecture | References | Problems |
 | :------------ | :------------- | :------------ | :------------ |
-| 18/09/2023 | Introduction | [Slides](/assets/competitive/Introduction.pdf) | [Leaders in array](http://practice.geeksforgeeks.org/problems/leaders-in-an-array/0), **[Kadane's algorithm](https://leetcode.com/problems/maximum-subarray/)**, and [Missing number in array](https://leetcode.com/problems/missing-number/)|
-| 21/09/2023 | Solutions of Trapping rain water and Sliding window maximum | [Rossano's notes*](/blog/2023/swm/) | **[Trapping rain water](https://leetcode.com/problems/trapping-rain-water/)** and [Sliding window maximum](https://leetcode.com/problems/sliding-window-maximum/)|
+| 18/09/2023 | Introduction | [Slides](/rossano/assets/competitive/Introduction.pdf) | [Leaders in array](http://practice.geeksforgeeks.org/problems/leaders-in-an-array/0), **[Kadane's algorithm](https://leetcode.com/problems/maximum-subarray/)**, and [Missing number in array](https://leetcode.com/problems/missing-number/)|
+| 21/09/2023 | Solutions of Trapping rain water and Sliding window maximum | [Rossano's notes*](/rossano/blog/2023/swm/) | **[Trapping rain water](https://leetcode.com/problems/trapping-rain-water/)** and [Sliding window maximum](https://leetcode.com/problems/sliding-window-maximum/)|
 
 <br>
 #### Topics from past years
