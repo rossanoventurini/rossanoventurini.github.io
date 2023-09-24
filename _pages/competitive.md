@@ -128,7 +128,7 @@ I strongly suggest you to watch the following video lectures as soon as possible
 | :------------ | :------------- | :------------ | :------------ |
 | 18/09/2023 | Introduction | [Slides](/rossano/assets/competitive/Introduction.pdf) | [Leaders in array](http://practice.geeksforgeeks.org/problems/leaders-in-an-array/0), **[Kadane's algorithm](https://leetcode.com/problems/maximum-subarray/)**, and [Missing number in array](https://leetcode.com/problems/missing-number/)|
 | 21/09/2023 | Solutions of Trapping rain water and Sliding window maximum | [Rossano's notes*](/rossano/blog/2023/swm/) | **[Trapping rain water](https://leetcode.com/problems/trapping-rain-water/)** and [Sliding window maximum](https://leetcode.com/problems/sliding-window-maximum/)|
-| 25/09/2023 | Binary search | [Rossano's notes*](/rossano/blog/2023/binarysearch/) | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/), [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), and **[Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)** |
+| 25/09/2023 | Binary search | [Rossano's notes*](/rossano/blog/2023/binarysearch/) [USACO Guide](https://usaco.guide/silver/binary-search?lang=cpp) | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/), [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), and **[Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)** |
 
 
 <br>
