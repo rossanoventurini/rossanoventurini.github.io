@@ -85,12 +85,11 @@ I strongly suggest you to watch the following video lectures as soon as possible
 
 <br>
 #### References
-* Introduction to Algorithms,  3rd Edition, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, The MIT Press, 2009 ([Amazon](http://www.amazon.com/Introduction-Algorithms-3rd-Thomas-Cormen/dp/0262033844/ref=sr_1_1?s=books&ie=UTF8&qid=1443160441&sr=1-1&keywords=introduction+to+algorithms)) [CCLR]
+* Introduction to Algorithms,  4th Edition, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, The MIT Press, 2022 ([Amazon](https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X/ref=sr_1_1?crid=2PCN8OPQGK6HZ&keywords=introduction+to+algorithms+4th&qid=1695609570&s=books&sprefix=introduction+to+algorithms+4th%2Cstripbooks-intl-ship%2C177&sr=1-1)) [CCLR]
 * Algorithms, 4th Edition, Robert Sedgewick, Kevin Wayne, Addison-Wesley Professional, 2011 ([Amazon](http://www.amazon.com/Algorithms-4th-Edition-Robert-Sedgewick/dp/032157351X/ref=pd_sim_14_2?ie=UTF8&refRID=1A2NFN935EST0ZQARB6H&dpID=51UDgHU9z9L&dpSrc=sims&preST=_AC_UL160_SR130%2C160_)) [RS]
 * Algorithms, Sanjoy Dasgupta, Christos Papadimitriou, Umesh Vazirani, McGraw-Hill, 2006\. ([Amazon](http://www.amazon.com/Algorithms-Sanjoy-Dasgupta/dp/0073523402)) [DPZ]
 * Programming Challenges: The Programming Contest Training Manual, Steven S. Skiena, Miguel A. Revilla, Springer, 2003 ([Amazon](http://www.amazon.com/Programming-Challenges-Contest-Training-Computer/dp/0387001638)) [SR]
 * Competitive Programming 4: The New Lower Bound of Programming Contests, Steven Halim, Felix Halim, ([here](https://cpbook.net/)) [HH]
-* Guide to Competitive Programming: Learning and Improving Algorithms Through Contests. Second Edition, Antti Laaksonen,  Springer, 2020 ([here](https://www.springer.com/gp/book/9783030393564)) [L]
   
 <br>
 #### Rust References
@@ -128,8 +127,9 @@ I strongly suggest you to watch the following video lectures as soon as possible
 | :------------ | :------------- | :------------ | :------------ |
 | 18/09/2023 | Introduction | [Slides](/rossano/assets/competitive/Introduction.pdf) | [Leaders in array](http://practice.geeksforgeeks.org/problems/leaders-in-an-array/0), **[Kadane's algorithm](https://leetcode.com/problems/maximum-subarray/)**, and [Missing number in array](https://leetcode.com/problems/missing-number/)|
 | 21/09/2023 | Solutions of Trapping rain water and Sliding window maximum | [Rossano's notes*](/rossano/blog/2023/swm/) | **[Trapping rain water](https://leetcode.com/problems/trapping-rain-water/)** and [Sliding window maximum](https://leetcode.com/problems/sliding-window-maximum/)|
-| 25/09/2023 | Binary search | [Rossano's notes*](/rossano/blog/2023/binarysearch/) [USACO Guide](https://usaco.guide/silver/binary-search?lang=cpp) | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/), [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), and **[Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)** |
-
+| 25/09/2023 | Binary search | [Rossano's notes*](/rossano/blog/2023/binarysearch/) and [USACO Guide](https://usaco.guide/silver/binary-search?lang=cpp) | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/), [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), and **[Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)** |
+| 02/10/2023 | Trees: representation, traversals, and Binary Search Tree| [Rossano's notes\*](notes/Trees.pdf). [Tree traversals](https://en.wikipedia.org/wiki/Tree_traversal). | [**Maximum path sum**](http://practice.geeksforgeeks.org/problems/maximum-path-sum/1)|
+| 05/10/2023 | Trees: representation, traversals, and Binary Search Tree| [Rossano's notes\*](notes/Trees.pdf). [CCLR] Chapters 10.4 and 12. | [**Longest k-Good Segment**](https://codeforces.com/contest/616/problem/D?locale=en) and [**Frogs and Mosquitoes**](https://codeforces.com/contest/609/problem/F?locale=en) |
 
 <br>
 #### Topics from past years
