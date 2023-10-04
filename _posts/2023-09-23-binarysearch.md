@@ -13,7 +13,7 @@ Binary search is undoubtedly one of computer science's most well-known and funda
 Binary search repeatedly divides the search range in half until the target element is found or the search range becomes empty, resulting in a time complexity of $$\Theta(\log n)$$. This is one of the easiest applications of the *Divide-and-Conquer paradigm*.
 
 <br>
-#### Divide-and-Conquer paradigm
+#### Divide-and-Conquer Paradigm
 
 The divide-and-conquer paradigm tackles a complex problem by breaking it down into smaller, more manageable subproblems of the same type. These subproblems are addressed recursively, and their solutions are combined to yield the solution for the original problem.
 
@@ -24,7 +24,7 @@ More precisely, a divide-and-conquer-based algorithm follows three main steps:
 - **Combine**: The solutions obtained from the subinstances are combined to obtain the final solution for the original, larger instance of the problem.
 
 <br>
-#### Binary search implementation
+#### Binary Search Implementation
 We can apply the above paradigm to search for a key in a sorted array of $$n$$ elements within $$\Theta(\log n)$$ comparisons.
 
 - **Divide**: The array is divided into two roughly equal halves, centering around the middle element of the array.
@@ -95,7 +95,7 @@ As a useful exercise you could try to modify the code above to return the smalle
 Instead of implementing the code above, we can find the first (or even the last) occurrence of a key with [partition_point](https://doc.rust-lang.org/std/primitive.slice.html#method.partition_point) method of the standard library. This method is even more generic that our code above. Indeed, it returns the index of the partition point in a sorted vector according to any given predicate.
 
 <br>
-#### Binary search the answer
+#### Binary Search the Answer
 Consider a problem where all the possible candidate answers are restricted to a range of values between certain `low` and `high` possible answers. In other words, any candidate answer $$x$$ falls within the range `[low, high)`.
 We also have a boolean predicate `pred` defined on the candidate answers that tells us if an answer is good or not for our aims. Our goal is to find the largest good answer.
 
@@ -210,7 +210,7 @@ fn select_intervals(intervals: &mut Vec<(usize, usize)>, c: usize) -> Option<usi
 ```
 
 <br>
-##### Other problems
+##### Other Problems
 - [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 - [Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)
