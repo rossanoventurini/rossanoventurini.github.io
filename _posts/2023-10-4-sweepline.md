@@ -46,7 +46,7 @@ For each point, we first add to the counter the number of intervals that begin a
     </div>
 </div>
 
-Note that the sweep line touches only points on the x-axis where an event occurs. For example, points $1$ and $6$ are not taken into consideration. This is important because the number of considered points, and thus the time complexity, is proportional to the number of intervals and not to the size of the x-axis.
+Note that the sweep line touches only points on the x-axis where an event occurs. For example, points $$1$$ and $$6$$ are not taken into consideration. This is important because the number of considered points, and thus the time complexity, is proportional to the number of intervals and not to the size of the x-axis.
 
 Here is a Rust implementation. We represent each interesting point as a pair consisting of the point and the kind, which is either `begin` or `end`. Then, we sort the vector of pairs in increasing order. Finally, we compute every state of the counter and its largest value. The correctness of the solution is based on a specific detail: since `begin` is considered smaller than `end`, if two points are the same, we first have pairs with `begin` and then pairs with `end`.
 
@@ -83,23 +83,45 @@ pub fn max_overlapping(intervals: &[(usize, usize)]) -> usize {
 
 <br>
 #### Closest Pair of Points
+Let's tackle a second problem to apply the sweep line paradigm to a two-dimensional problem.
 
-In the second problem we use the sweep line paradigm on a set of 2D points.
+*We are given a set of $$n$$ points in the plane.*
 
-*We are given a set of $n$ points in the plane.*
+*The goal is to find the closest pair of points in the set. The distance between two points $$(x_1, y_1)$$ and $$(x_2,y_2)$$ is the Euclidian distance $$d((x_1,y_1), (x_2,y_2)) = \sqrt{(x_1-x_2)^2 +(y_1-y_2)^2}$$.*
 
-*The goal is to find the closest pair of points in the set. The distance between two points $$(x_1, y_1)$$ and $$(x_2,y_2)$$ is the Euclidian distance $$d((x_1,y_1), (x_2,y_2)) = \sqrt((x_1-x_2)^2 +(y_1-y_2)^2)$$.*
- 
-We start by sorting the points in increasing order of their x-coordinate. We keep track of the shortest distance $$\delta$$ seen so far. Initialy $$\delta$$ is the distance between an arbitrary pair of points.
-We use a vertical sweep line to iterate through them, trying to improve the current shortest distance $\delta$. When we process the point $p=(x,y)$, we consider the window with the y-coordinates of all points with x-coordinate in the interval $[x-\delta, x]$. This is because any point with a smaller x-coordinate has a distance with $p$ which is surely larger than $\delta$. Furthermore, by a similar argument, we can consider only point with y-coordinate in the range $[y-\delta, y+\delta]$.
+A brute force algorithm calculates the distances between all possible pairs of points, resulting in a time complexity of $$\Theta(n^2)$$.
 
-Observe that each point is inserted and removed from the set at most once, so the algorithm runs in $\Theta(n\log n)$ time.
 
-- [https://en.wikipedia.org/wiki/Sweep_line_algorithm]
-- [https://leetcode.com/discuss/study-guide/2166045/line-sweep-algorithms]
-- [https://www.geeksforgeeks.org/closest-pair-of-points-using-sweep-line-algorithm/]
-- [https://www.youtube.com/watch?v=tgQ3nfemjjQ&t=2474s]
-- [https://usaco.guide/plat/sweep-line?lang=cpp]
+A faster algorithm employs the sweep line paradigm. We start by sorting the points in increasing order of their x-coordinates. We keep track of the shortest distance, denoted as $\delta$, seen so far. Initially, $\delta$ is set to the distance between an arbitrary pair of points.
+
+We use a vertical sweep line to iterate through the points, attempting to improve the current shortest distance $\delta$. 
+Consider the point $p = (x, y)$ just reached by the vertical sweep line. We can improve $\delta$ if the closest point *to the left* of $p$ has a distance smaller than $\delta$. If such a point exists, it must have an x-coordinate in the interval $[x - \delta, x]$, as it is to the left of $p$, and a y-coordinate in the interval $[y - \delta, y + \delta]$.
+
+The figure below shows the rectangle within which this point must lie. We have a rather surprising fact: *there can be at most $$6$$ points within the rectangle*.
+
+Why is this the case? The $$6$$ circles within the perimeter of the rectangle represent points that are at distance exactly $$\delta$$ apart from each other.
+This represents the maximum number of possible points in the rectangle. Indeed, we cannot have two points, let's call them $$q$$ and $$q'$$, within the same gray square.
+
+Take another look at the figure below. The distance between $$q$$ and $$q'$$ is smaller than $$\delta$$. So, if point $$q'$$ exists, it would have already been processed by the sweep line because it has an x-coordinate smaller than that of $$p$$. Therefore, the value of $$\delta$$ would be smaller than its current value.
+
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/SweepLine/ClosestPair.svg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+Now that we have the intuition of the solution, let's add more details. 
+The algorithm maintains a BST with points sorted by their y-coordinates. When we process 
+point $$p=(x,y)$$, we iterate over the points with y-coordinates in the interval $$[y-\delta, y+\delta]$$.
+If the current point has a $$x$$-coordinate smaller than $$x-\delta$$, we remove this point from the set. It  will be never useful anymore. Otherwise, we compute its distance with $$p$$ and update $$\delta$$ if needed.Before moving the sweep line to the next point, we insert $$p$$ in the set. 
+
+What's the complexity of this algorithm? 
+What is the complexity of this algorithm? Identifying the range of points with the required y-coordinates takes $$\Theta(\log n)$$ time. Iterating over the points in this range takes constant time per point and removing one of them takes $$\Theta(\log n)$$ time.
+
+How many points do we need to iterate over? There can be at most $$6$$ points that have an x-coordinate greater than or equal to $$x-\delta$$ and therefore survive. On the other hand, there can be many points with smaller x-coordinates.
+
+However, since each point is inserted and subsequently removed from the set at most once during the execution of the algorithm, the cost of dealing with all these points is at most $$\Theta(n \log n)$$.
 
 #### Exercises 
 - [Check if all the integers in a range are covered](https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/)
