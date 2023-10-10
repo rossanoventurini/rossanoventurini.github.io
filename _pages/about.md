@@ -39,8 +39,8 @@ I love algorithms, data structures, low-level code optimizations, and Rust, ofte
 - *System and method for string processing and searching using a compressed permuterm index.* Number US 2009/0063465 A1 of 5 March 2009. Co-authored by P. Ferragina. Owned by Yahoo! Inc. U.S. 
 
 ### Service
-**PC co-chair** (with Franco Maria Nardini and Nadia Pisanti) of the 30th edition of the International Symposium on String Processing and Information Retrieval, SPIRE 2023.
+**PC co-chair** (with Franco Maria Nardini and Nadia Pisanti) of the 30th edition of the International Symposium on String Processing and Information Retrieval, [SPIRE 2023](http://spire2023.isti.cnr.it).
 
-**PC co-chair** (with Gabriele Fici and Marinella Sciortino) of the 24th edition of the International Symposium on String Processing and Information Retrieval, SPIRE 2017.
+**PC co-chair** (with Gabriele Fici and Marinella Sciortino) of the 24th edition of the International Symposium on String Processing and Information Retrieval, [SPIRE 2017](http://pages.di.unipi.it/spire2017).
 
 **Program Committees**: EMNLP-CoNLL'12, CIKM'12,  WSDM'13, CPM'13, CIKM'13, WSDM'14, ESA'14, PODS'15, IIR'15, SIGIR'15, SPIRE'15, AAIM'16, IIR'16, SIGIR'16, WSDM'17, WWW'17,  SEA'17, SIGIR'17, IIR'17, WWW'18, SIGIR'19, SPIRE'20, SIGIR'21, ESA'21, and SIGIR'22.
