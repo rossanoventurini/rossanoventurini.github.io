@@ -126,13 +126,13 @@ I strongly suggest you to watch the following video lectures as soon as possible
 | Date | Lecture | References | Problems |
 | :------------ | :------------- | :------------ | :------------ |
 | 18/09/2023 | Introduction | [Slides](/rossano/assets/competitive/Introduction.pdf) | [Leaders in array](http://practice.geeksforgeeks.org/problems/leaders-in-an-array/0), **[Kadane's algorithm](https://leetcode.com/problems/maximum-subarray/)**, and [Missing number in array](https://leetcode.com/problems/missing-number/)|
-| 21/09/2023 | Solutions of Trapping rain water and Sliding window maximum | [Rossano's notes*](/rossano/blog/2023/swm/) | **[Trapping rain water](https://leetcode.com/problems/trapping-rain-water/)** and [Sliding window maximum](https://leetcode.com/problems/sliding-window-maximum/)|
-| 25/09/2023 | Binary search | [Rossano's notes*](/rossano/blog/2023/binarysearch/) and [USACO Guide](https://usaco.guide/silver/binary-search?lang=cpp) | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/), [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), and **[Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)** |
+| 21/09/2023 | Solutions of Trapping rain water and Sliding window maximum | [Rossano's notes](/rossano/blog/2023/swm/) | **[Trapping rain water](https://leetcode.com/problems/trapping-rain-water/)** and [Sliding window maximum](https://leetcode.com/problems/sliding-window-maximum/)|
+| 25/09/2023 | Binary search | [Rossano's notes](/rossano/blog/2023/binarysearch/) and [USACO Guide](https://usaco.guide/silver/binary-search?lang=cpp) | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/), [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), and **[Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)** |
 | 02/10/2023 | Trees: representation, traversals, and Binary Search Tree| [Tree traversals](https://en.wikipedia.org/wiki/Tree_traversal) | [**Maximum path sum**](http://practice.geeksforgeeks.org/problems/maximum-path-sum/1)|
 | 05/10/2023 | [**Hands-On 1**](/rossano/blog/2023/handson12324/). Deadline: 19/10/2023 |  |  |
 | 05/10/2023 | Trees: representation, traversals, and Binary Search Tree. Two pointers trick | [CCLR] Chapters 10.4 and 12 | [**Frogs and Mosquitoes**](https://codeforces.com/contest/609/problem/F?locale=en) |
-| 09/10/2023 | Sweep Line Algorithm | [Rossano's notes*](/rossano/blog/2023/sweepline). [Two pointers technique](https://www.geeksforgeeks.org/two-pointers-technique/) | [**Check if All the Integers in a Range Are Covered**](https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/), [Cow Steeplechase II](http://www.usaco.org/index.php?page=viewproblem2&cpid=943), and [**Longest k-Good Segment**](https://codeforces.com/contest/616/problem/D?locale=en)|
-| 12/10/2023 | Prefix Sums| [Rossano's notes*](/rossano/blog/2023/prefixsums) | [**Subarray Sums II**](https://cses.fi/problemset/task/1661) and [Good Subarrays](https://codeforces.com/contest/1398/problem/C)|
+| 09/10/2023 | Sweep Line Algorithm | [Rossano's notes](/rossano/blog/2023/sweepline). [Two pointers technique](https://www.geeksforgeeks.org/two-pointers-technique/) | [**Check if All the Integers in a Range Are Covered**](https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/), [Cow Steeplechase II](http://www.usaco.org/index.php?page=viewproblem2&cpid=943), and [**Longest k-Good Segment**](https://codeforces.com/contest/616/problem/D?locale=en)|
+| 12/10/2023 | Prefix Sums| [Rossano's notes](/rossano/blog/2023/prefixsums) | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/), [**Continuous Subarray Sum**](https://leetcode.com/problems/continuous-subarray-sum/), and [Good Subarrays](https://codeforces.com/contest/1398/problem/C)|
 
 <br>
 #### Topics from past years
@@ -152,9 +152,6 @@ I strongly suggest you to watch the following video lectures as soon as possible
 | 2021 | Graph algorithms: BFS, DFS, and Topological Sort | [CCLR] Chapter 22 | [X total shapes](http://practice.geeksforgeeks.org/problems/x-total-shapes/0), [IsBipartite](http://practice.geeksforgeeks.org/problems/bipartite-graph/1), and [Fox and names](http://codeforces.com/problemset/problem/510/C?locale=en) |
 | 2021 | Graph algorithms: Strongly Connected Components and Single-Source Shortest Path| [CCLR] Chapters 22 and 23  | [Learning languages](http://codeforces.com/problemset/problem/277/A?locale=en) and [Checkposts](http://codeforces.com/problemset/problem/427/C?locale=en) |
 | 2019 | Graph algorithms: Minimum Spanning Tree (and Disjoint Sets data structures) |[CCLR] Chapters 21 and 23. Kruskal: [code](https://github.com/spaghetti-source/algorithm/blob/master/graph/kruskal.cc), Disjoint Set: [tutorial](https://www.topcoder.com/community/data-science/data-science-tutorials/disjoint-set-data-structures/) | [Minimum spanning tree](http://www.spoj.com/problems/MST/) |
-
-
-\* Notes marked with *"Rossano's notes"* are rough and non-exhaustive notes that I used while lecturing. Please use them just to have a list of the topics of each lecture and use other reported references to study these arguments.
 
 <br>
 #### Further (optional) topics

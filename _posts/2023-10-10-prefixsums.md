@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  The Power of Prefix Sums 
+title: The Power of Prefix Sums 
 date: 2023-10-10 7:01:00
-description: Notes for the course Competitive Programming and Contests at University of Pisa
+description: Prefix sums offer an elegant and efficient solution to a variety of problems. In this notes, we showcase several such problems and provide their solutions with Rust implementations.
 tags: rust, algorithms, data-structures
 categories: notes
-thumbnail: assets/img/prefixsums/thumb.png
+thumbnail: assets/img/prefixsums/Prefixsums_1.svg
 giscus_comments: true
 ---
-*Prefix sums*, also known as cumulative sums or cumulative frequencies, provides an elegant and efficient way to solve a wide range of problems that involve querying cumulative information about a sequence of values or elements.
+*Prefix sums*, also known as cumulative sums or cumulative frequencies, offer an elegant and efficient way to solve a wide range of problems that involve querying cumulative information about a sequence of values or elements.
 
 The essence of prefix sums lies in transforming a given array of values into another array, where each element at a given index represents the cumulative sum of all preceding elements in the original array.
 
@@ -18,13 +18,21 @@ For example, suppose you have an array $$A[1,8]$$ with values: [2, 4, 1, 7, 3, 0
 
 These queries can be solved in constant time by maintaining the prefix sum array. This array $$P[1,n]$$ stores, at any position $$i$$, the sum of the values in $$A$$ up to the $$i$$th position. In other words, $$P[i] = \sum_{k=1}^i A[k]$$.
 
+The arrays $$A$$ and $$P$$ are shown in the figure below.
+
+<div class="row mt-3 ">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/prefixsums/Prefixsums_1.svg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
 Armed with $$P$$, a `range_sum(i,j)` query is resolved by calculating $$P[j]-P[i-1]$$.
 
-Continuing the previous example, the array $$P[1,8]$$ has values: [2, 6, 7, 14, 17, 17, 21, 23]. Therefore, `range_sum(2, 6)` is $$P[6] - P[1] = 17 - 2 = 15$$.
+Continuing the example shown in the figure above, `range_sum(2, 6)` is $$P[6] - P[1] = 17 - 2 = 15$$.
 
 <br>
 #### Prefix Sums in Rust
-In Rust, we can utilize [`scan`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.scan) to produce prefix sums (and much more) from elements within an iterator.
+In Rust, the combinator  [`scan`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.scan) can produce the prefix sums (and much more) from an iterator.
 
 `scan` is an iterator adapter that bears similarity to [fold](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold). Similar to `fold`, `scan` maintains an internal state, initially set to a seed value, which is modified by a closure taking both the current internal state and the current element from the iterator into account.
 
@@ -114,7 +122,7 @@ More formally, you need to find the number of such pairs of indices $$i$$ and $$
 $$\sum_{k=1}^{i-1} A[k] = \sum_{k=i}^{j} A[j] = \sum_{k=j+1}^n A[k]$$
 
 For the solution, let $$S$$ be the sum of the values in the array. If $$3$$ does not divide $$S$$, we conclude that the result is zero. Otherwise, we compute an array $$C$$ that stores, at position $$i$$, the number of suffixes of $$A[i\ldots n]$$ that sum to $$\frac{S}{3}$$. 
-Then, we scan $$A$$ from left to right to compute the prefix sums. Every time the prefix sum at position $$i$$ is $$\frac{S}{3}$$, we add $$C[i+2]$$ to the result. This is because the part $A[1..i]$ sums to $$S/3$$ and can be combined with any pair of parts of $$A[i+1..n]$$ where both parts sums to $$S/3$$. Since the values in $$A[i+1..n]$$ sum to $$2/3 S$$, the number of such pairs is the number of suffixes that sum to $$S/3$$ in $$A[i+2..n]$$.
+Then, we scan $$A$$ from left to right to compute the prefix sums. Every time the prefix sum at position $$i$$ is $$\frac{S}{3}$$, we add $$C[i+2]$$ to the result. This is because the part $$A[1..i]$$ sums to $$S/3$$ and can be combined with any pair of parts of $$A[i+1..n]$$ where both parts sums to $$S/3$$. Since the values in $$A[i+1..n]$$ sum to $$2/3 S$$, the number of such pairs is the number of suffixes that sum to $$S/3$$ in $$A[i+2..n]$$.
 Indeed, if one of this suffix sums to $$S/3$$, say $$A[j..n]$$, then we are sure that $$A[i+1, j-1]$$ sums to $$S/3$$.
 
 Here's a Rust implementation.
@@ -164,18 +172,18 @@ pub fn number_of_ways(a: &[i64]) -> usize {
 
 *The goal is to permute the elements in $$A$$ in order to maximize the sum of the results of the queries in $$Q$$.*
 
-The main observation is that if we want to maximize the sum, we have to assign the largest values to the most frequently accessed entries. Thus, the solution consists of sorting both $A$ by descending values and the indexes of $A$ by descending frequency of access and pairing them in this order. Therefore, once we have computed the frequencies, the solution takes $\Theta(n\log n)$ time.
+The main observation is that if we want to maximize the sum, we have to assign the largest values to the most frequently accessed entries. Thus, the solution consists of sorting both $$A$$ by descending values and the indexes of $$A$$ by descending frequency of access and pairing them in this order. Therefore, once we have computed the frequencies, the solution takes $$\Theta(n\log n)$$ time.
 
-Thus, we are left with the problem of computing access frequencies. In other words, we want to compute the array $F[1,n]$, where $F[i]$ is the number of times the index $i$ belongs to a query of $Q$. Computing this vector by updating every single entry in $F$ for each query takes $$O(nq)$$ and, thus, is clearly infeasible.
+Thus, we are left with the problem of computing access frequencies. In other words, we want to compute the array $$F[1,n]$$, where $$F[i]$$ is the number of times the index $$i$$ belongs to a query of $$Q$$. Computing this vector by updating every single entry in $$F$$ for each query takes $$O(nq)$$ and, thus, is clearly infeasible.
 
-Thus, we need a clever way to compute those frequencies. The idea is to construct an array $$U[1\ldots n]$$ such that its prefix sums are equal to our target array $F$. Interestingly, we need to modify just two entries of $U$ to account for a query in $Q$. 
+Thus, we need a clever way to compute those frequencies. The idea is to construct an array $$U[1\ldots n]$$ such that its prefix sums are equal to our target array $$F$$. Interestingly, we need to modify just two entries of $$U$$ to account for a query in $$Q$$. 
 
-Initially, all the entries of $U$ are set to $$0$$. For a query $$\langle l, r \rangle$$, we add $$1$$ to $$U[l]$$ and subtract $$1$$ from $$U[r+1]$$. This way, the prefix sums are as follows:
-- Unchanged for indexes less than $l$.
+Initially, all the entries of $$U$$ are set to $$0$$. For a query $$\langle l, r \rangle$$, we add $$1$$ to $$U[l]$$ and subtract $$1$$ from $$U[r+1]$$. This way, the prefix sums are as follows:
+- Unchanged for indexes less than $$l$$.
 - Increased by one for indexes in $$[l, r]$$.
-- Unchanged for indexes greater than $r$.
+- Unchanged for indexes greater than $$r$$.
 
-Therefore, the prefix sum of $$U$$ up to $$i$$ equals $F[i]$. This algorithm takes $$O(q+n)$$ time.
+Therefore, the prefix sum of $$U$$ up to $$i$$ equals $$F[i]$$. This algorithm takes $$O(q+n)$$ time.
 
 Here's the Rust implemetation.
 
@@ -223,3 +231,4 @@ pub fn little_girl(a: &[i64], q: &[(usize, usize)]) -> i64 {
 - [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 - [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
 - [Good Subarrays](https://codeforces.com/contest/1398/problem/C)
+- [Running Miles](https://codeforces.com/contest/1826/problem/D)

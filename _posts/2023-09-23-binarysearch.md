@@ -2,7 +2,7 @@
 layout: post
 title:  Applications of Binary Search
 date: 2023-09-23 7:01:00
-description: Notes for the course Competitive Programming and Contests at University of Pisa
+description: Binary search is undeniably one of the most renowned and fundamental algorithms in computer science. In these notes, we delve into problems that can be solved using the idea of 'Binary Searching for the Answer'. 
 tags: rust, algorithms
 categories: notes
 thumbnail: assets/img/binarysearch/thumb.png
