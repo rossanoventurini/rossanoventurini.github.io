@@ -98,12 +98,12 @@ A faster algorithm employs the sweep line paradigm. We start by sorting the poin
 We use a vertical sweep line to iterate through the points, attempting to improve the current shortest distance $$\delta$$. 
 Consider the point $$p = (x, y)$$ just reached by the vertical sweep line. We can improve $$\delta$$ if the closest point *to the left* of $$p$$ has a distance smaller than $$\delta$$. If such a point exists, it must have an x-coordinate in the interval $$[x - \delta, x]$$, as it is to the left of $$p$$, and a y-coordinate in the interval $$[y - \delta, y + \delta]$$.
 
-The figure below shows the rectangle within which this point must lie. We have a fact that, at a first glance, may seem quite surprising: *there can be at most $$6$$ points within the rectangle*.
+The figure below shows the rectangle within which this point must lie. We have a fact that, at a first glance, may seem quite surprising: *there can be at most $$6$$ points within the rectangle*. The $$6$$ circles within the perimeter of the rectangle represent points that are at distance exactly $$\delta$$ apart from each other. See  the *Section 5.4 of Algorithm Design by Kleinberg and Tardos* for a proof of this fact.
 
-Why is this the case? The $$6$$ circles within the perimeter of the rectangle represent points that are at distance exactly $$\delta$$ apart from each other.
-This represents the maximum number of possible points in the rectangle. Indeed, we cannot have two points, let's call them $$q$$ and $$q'$$, within the same gray square.
-Take another look at the figure below. The distance between $$q$$ and $$q'$$ is smaller than $$\delta$$. So, if point $$q'$$ exists, it would have already been processed by the sweep line because it has an x-coordinate smaller than that of $$p$$. Therefore, the value of $$\delta$$ would be smaller than its current value.
+For our purposes, a slightly weaker result is sufficient, which states that *the rectangle contains at most $$8$$ points*.
 
+To understand why, consider the $$8$$ squares in the figure above. Each of these squares, including its perimeter, can contain at most one point.
+Assume, for the sake of contradiction, that a square contains two points, denoted as $$q$$ and $$q'$$. The distance between $$q$$ and $$q'$$ is smaller than $$\delta$$. If point $$q'$$ exists, it would have already been processed by the sweep line because it has an x-coordinate smaller than that of $$p$$. However, this is not possible, because otherwise the value of $$\delta$$ would be smaller than its current value.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -111,7 +111,7 @@ Take another look at the figure below. The distance between $$q$$ and $$q'$$ is 
     </div>
 </div>
 
-Now that we have the intuition of the solution, let's add more details. 
+Now that we have the intuition of the solution, let's add more details.
 The algorithm maintains a BST with points sorted by their y-coordinates. When we process 
 point $$p=(x,y)$$, we iterate over the points with y-coordinates in the interval $$[y-\delta, y+\delta]$$.
 If the current point has a $$x$$-coordinate smaller than $$x-\delta$$, we remove this point from the set. It  will be never useful anymore. Otherwise, we compute its distance with $$p$$ and update $$\delta$$ if needed. Before moving the sweep line to the next point, we insert $$p$$ in the set.
