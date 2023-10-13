@@ -45,8 +45,8 @@ let a = vec![2, 4, 1, 7, 3, 0, 4, 2];
 
 let psums = a
     .iter()
-    .scan(0, |sum, i| {
-        *sum += i;
+    .scan(0, |sum, e| {
+        *sum += e;
         Some(*sum)
     })
     .collect::<Vec<_>>();
@@ -94,8 +94,8 @@ impl Ilya {
             .as_bytes()
             .windows(2)
             .map(|w| if w[0] == w[1] { 1usize } else { 0usize })
-            .scan(0, |sum, i| {
-                *sum += i;
+            .scan(0, |sum, e| {
+                *sum += e;
                 Some(*sum)
             })
             .collect::<Vec<_>>();
@@ -113,58 +113,6 @@ impl Ilya {
 }
 ```
 
-<br>
-##### Number of Ways
-*Given an array $$A[1,n]$$, count the number of ways to split the array into three contiguous parts so that they have the same sums.*
-
-More formally, you need to find the number of such pairs of indices $$i$$ and $$j$$ ($$2 \leq i \leq j \leq n-1$$) such that:
-
-$$\sum_{k=1}^{i-1} A[k] = \sum_{k=i}^{j} A[j] = \sum_{k=j+1}^n A[k]$$
-
-For the solution, let $$S$$ be the sum of the values in the array. If $$3$$ does not divide $$S$$, we conclude that the result is zero. Otherwise, we compute an array $$C$$ that stores, at position $$i$$, the number of suffixes of $$A[i\ldots n]$$ that sum to $$\frac{S}{3}$$. 
-Then, we scan $$A$$ from left to right to compute the prefix sums. Every time the prefix sum at position $$i$$ is $$\frac{S}{3}$$, we add $$C[i+2]$$ to the result. This is because the part $$A[1..i]$$ sums to $$S/3$$ and can be combined with any pair of parts of $$A[i+1..n]$$ where both parts sums to $$S/3$$. Since the values in $$A[i+1..n]$$ sum to $$2/3 S$$, the number of such pairs is the number of suffixes that sum to $$S/3$$ in $$A[i+2..n]$$.
-Indeed, if one of this suffix sums to $$S/3$$, say $$A[j..n]$$, then we are sure that $$A[i+1, j-1]$$ sums to $$S/3$$.
-
-Here's a Rust implementation.
-
-```rust
-pub fn number_of_ways(a: &[i64]) -> usize {
-    let sum: i64 = a.iter().sum();
-
-    if sum % 3 != 0 {
-        return 0;
-    }
-
-    let target = sum / 3;
-    let mut c: Vec<_> = a
-        .iter()
-        .rev()
-        .scan(0, |sum, i| {
-            *sum += i;
-            Some(*sum)
-        })
-        .scan(0, |counter, sum| {
-            if sum == target {
-                *counter += 1usize
-            };
-            Some(*counter)
-        })
-        .collect();
-
-    c.reverse();
-
-    let mut result = 0;
-    let mut sum = 0;
-    for (i, &v) in a[..a.len() - 2].iter().enumerate() {
-        sum += v;
-        if sum == target {
-            result += c[i + 2];
-        }
-    }
-
-    result
-}
-```
 
 <br>
 ##### Little Girl and Maximum
@@ -176,9 +124,14 @@ The main observation is that if we want to maximize the sum, we have to assign t
 
 Thus, we are left with the problem of computing access frequencies. In other words, we want to compute the array $$F[1,n]$$, where $$F[i]$$ is the number of times the index $$i$$ belongs to a query of $$Q$$. Computing this vector by updating every single entry in $$F$$ for each query takes $$O(nq)$$ and, thus, is clearly infeasible.
 
-Thus, we need a clever way to compute those frequencies. The idea is to construct an array $$U[1\ldots n]$$ such that its prefix sums are equal to our target array $$F$$. Interestingly, we need to modify just two entries of $$U$$ to account for a query in $$Q$$. 
+We require a faster algorithm to compute these frequencies. One possible solution involves using the [sweep line algorithm](blog/2023/sweepline/). Since the queries represent intervals, and calculating the frequencies equates to counting the number of overlapping intervals at each position, we can employ an approach similar to the one used in solving the *Maximum Number of Overlapping Intervals* problem, as detailed in these [notes](blog/2023/sweepline/).
+
+This solution has a time complexity of $\Theta(q\log q)$, due to the comparison-based sorting of interval endpoints. Since the endpoints in our problem have a maximum value of $n$, we can optimize the solution to run in $\Theta(q)$ using counting sort. However, there exists an alternative solution based on prefix sums, which is much simpler to implement.
+
+The main idea of this alternative solution is to construct an array $$U[1\ldots n]$$ such that its prefix sums are equal to our target array $$F$$. Interestingly, we need to modify just two entries of $$U$$ to account for a query in $$Q$$.
 
 Initially, all the entries of $$U$$ are set to $$0$$. For a query $$\langle l, r \rangle$$, we add $$1$$ to $$U[l]$$ and subtract $$1$$ from $$U[r+1]$$. This way, the prefix sums are as follows:
+
 - Unchanged for indexes less than $$l$$.
 - Increased by one for indexes in $$[l, r]$$.
 - Unchanged for indexes greater than $$r$$.
@@ -208,8 +161,8 @@ pub fn little_girl(a: &[i64], q: &[(usize, usize)]) -> i64 {
 
     let mut f = u
         .iter()
-        .scan(0, |sum, i| {
-            *sum += i;
+        .scan(0, |sum, e| {
+            *sum += e;
             Some(*sum)
         })
         .collect::<Vec<_>>();
@@ -222,10 +175,62 @@ pub fn little_girl(a: &[i64], q: &[(usize, usize)]) -> i64 {
     a_sorted
         .iter()
         .zip(f)
-        .fold(0, |result, (v, f)| result + v * f)
+        .fold(0, |result, (value, freq)| result + value * freq)
 }
 ```
 
+<br>
+##### Number of Ways
+*Given an array $$A[1,n]$$, count the number of ways to split the array into three contiguous parts so that they have the same sums.*
+
+More formally, you need to find the number of such pairs of indices $$i$$ and $$j$$ ($$2 \leq i \leq j \leq n-1$$) such that:
+
+$$\sum_{k=1}^{i-1} A[k] = \sum_{k=i}^{j} A[j] = \sum_{k=j+1}^n A[k]$$
+
+For the solution, let $$S$$ be the sum of the values in the array. If $$3$$ does not divide $$S$$, we conclude that the result is zero. Otherwise, we compute an array $$C$$ that stores, at position $$i$$, the number of suffixes of $$A[i\ldots n]$$ that sum to $$\frac{S}{3}$$. 
+Then, we scan $$A$$ from left to right to compute the prefix sums. Every time the prefix sum at position $$i$$ is $$\frac{S}{3}$$, we add $$C[i+2]$$ to the result. This is because the part $$A[1..i]$$ sums to $$S/3$$ and can be combined with any pair of parts of $$A[i+1..n]$$ where both parts sums to $$S/3$$. Since the values in $$A[i+1..n]$$ sum to $$2/3 S$$, the number of such pairs is the number of suffixes that sum to $$S/3$$ in $$A[i+2..n]$$.
+Indeed, if one of this suffix sums to $$S/3$$, say $$A[j..n]$$, then we are sure that $$A[i+1, j-1]$$ sums to $$S/3$$.
+
+Here's a Rust implementation.
+
+```rust
+pub fn number_of_ways(a: &[i64]) -> usize {
+    let sum: i64 = a.iter().sum();
+
+    if sum % 3 != 0 {
+        return 0;
+    }
+
+    let target = sum / 3;
+    let mut c: Vec<_> = a
+        .iter()
+        .rev()
+        .scan(0, |sum, e| {
+            *sum += e;
+            Some(*sum)
+        })
+        .scan(0, |counter, sum| {
+            if sum == target {
+                *counter += 1usize
+            };
+            Some(*counter)
+        })
+        .collect();
+
+    c.reverse();
+
+    let mut result = 0;
+    let mut sum = 0;
+    for (i, &v) in a[..a.len() - 2].iter().enumerate() {
+        sum += v;
+        if sum == target {
+            result += c[i + 2];
+        }
+    }
+
+    result
+}
+```
 <br>
 #### Exercises
 - [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
