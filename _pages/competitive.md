@@ -2,7 +2,7 @@
 layout: page
 permalink: /competitive/
 title: Competitive Programming and Contests
-description: 
+description: This the Web page of "Competitive Programming and Contests" course at University of Pisa.
 nav: false
 nav_order:
 ---
@@ -133,8 +133,8 @@ I strongly suggest you to watch the following video lectures as soon as possible
 | 05/10/2023 | Trees: representation, traversals, and Binary Search Tree. Two pointers trick | [CCLR] Chapters 10.4 and 12 | [**Frogs and Mosquitoes**](https://codeforces.com/contest/609/problem/F?locale=en) |
 | 09/10/2023 | Sweep Line Algorithm | [Rossano's notes](/rossano/blog/2023/sweepline). [Two pointers technique](https://www.geeksforgeeks.org/two-pointers-technique/) | [**Check if All the Integers in a Range Are Covered**](https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/), [Cow Steeplechase II](http://www.usaco.org/index.php?page=viewproblem2&cpid=943), and [**Longest k-Good Segment**](https://codeforces.com/contest/616/problem/D?locale=en)|
 | 12/10/2023 | Prefix Sums| [Rossano's notes](/rossano/blog/2023/prefixsums) | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/), [**Continuous Subarray Sum**](https://leetcode.com/problems/continuous-subarray-sum/), and [Good Subarrays](https://codeforces.com/contest/1398/problem/C)|
-| 16/10/2023 | Prefix sum: Fenwick tree (aka Binary Indexed Tree (BIT)) | [Rossano's notes\*](/rossano/blog/2023/fenwicktree). [Wikipedia](https://en.wikipedia.org/wiki/Fenwick_tree), [tutorial](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/#add), [video](https://www.youtube.com/watch?v=CWDQJGaN1gY), and [visualgo](https://visualgo.net/fenwicktree).| [**Update the array**](http://www.spoj.com/problems/UPDATEIT/) |
-| 19/10/2023 | Applications of Fenwick tree and Range update with Fenwick tree. | [Rossano's notes\*](/rossano/blog/2023/fenwicktree). [Range updates on BIT](http://petr-mitrichev.blogspot.com/2013/05/fenwick-tree-range-updates.html). [Tutorial](https://cp-algorithms.com/data_structures/fenwick.html). [RMQ with BIT](http://ioinformatics.org/oi/pdf/v9_2015_39_44.pdf) (optional) | [**Nested segments**](http://codeforces.com/problemset/problem/652/D?locale=en) and [Pashmak and Parmida's problem](http://codeforces.com/problemset/problem/459/D?locale=en) |
+| 16/10/2023 | Prefix sum: Fenwick tree (aka Binary Indexed Tree (BIT)) | [Rossano's notes\*](/rossano/blog/2023/fenwick). [Wikipedia](https://en.wikipedia.org/wiki/Fenwick_tree), [tutorial](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/#add), [video](https://www.youtube.com/watch?v=CWDQJGaN1gY), and [visualgo](https://visualgo.net/fenwicktree).| [**Update the array**](http://www.spoj.com/problems/UPDATEIT/) |
+| 19/10/2023 | Applications of Fenwick tree and Range update with Fenwick tree. | [Rossano's notes\*](/rossano/blog/2023/fenwick). [Range updates on BIT](http://petr-mitrichev.blogspot.com/2013/05/fenwick-tree-range-updates.html). [Tutorial](https://cp-algorithms.com/data_structures/fenwick.html). [RMQ with BIT](http://ioinformatics.org/oi/pdf/v9_2015_39_44.pdf) (optional) | [**Nested segments**](http://codeforces.com/problemset/problem/652/D?locale=en) and [Pashmak and Parmida's problem](http://codeforces.com/problemset/problem/459/D?locale=en) |
 
 <br>
 #### Topics from past years
