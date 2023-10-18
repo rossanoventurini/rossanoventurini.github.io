@@ -188,3 +188,5 @@ pub fn closest_pair(points: &mut [(i64, i64)]) -> Option<i64> {
 - [Fortune's algorithm](https://en.wikipedia.org/wiki/Fortune%27s_algorithm)
 - [Check if all the integers in a range are covered](https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/)
 - [Cow Steeplechase II](http://www.usaco.org/index.php?page=viewproblem2&cpid=943)
+
+These notes are for the [*"Competitive Programming and Contests"*](/rossano/competitive/) course at Università di Pisa.

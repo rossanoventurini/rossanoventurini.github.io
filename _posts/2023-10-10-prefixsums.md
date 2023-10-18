@@ -237,3 +237,5 @@ pub fn number_of_ways(a: &[i64]) -> usize {
 - [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
 - [Good Subarrays](https://codeforces.com/contest/1398/problem/C)
 - [Running Miles](https://codeforces.com/contest/1826/problem/D)
+
+These notes are for the [*"Competitive Programming and Contests"*](/rossano/competitive/) course at Università di Pisa.

@@ -9,7 +9,8 @@ thumbnail: assets/img/binarysearch/thumb.png
 giscus_comments: true
 ---
 
-Binary search is undoubtedly one of computer science's most well-known and fundamental algorithms. This elegant and efficient algorithm searches for a specific key, say $$k$$, within a sorted array of $$n$$ items, say $$A[0, n-1]$$. 
+Binary search is undoubtedly one of computer science's most well-known and fundamental algorithms. This elegant and efficient algorithm searches for a given key within a sorted array of $$n$$ items.
+
 Binary search repeatedly divides the search range in half until the target element is found or the search range becomes empty, resulting in a time complexity of $$\Theta(\log n)$$. This is one of the easiest applications of the *Divide-and-Conquer paradigm*.
 
 <br>
@@ -60,8 +61,8 @@ A lot of existing implementations on the net use instead the expression `middle 
 Indeed, it leads to overflow if `low + high` is greater than `usize::MAX`.
 
 It is also important to observe that when there are multiple occurrences of the searched key, the function returns the position of the first encountered occurrence, not necessarily the first occurrence in the vector.
-This behavior aligns with the implementation of [binary search](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.binary_search) in Rust.
-However, it is often very useful to report the position of the first occurrence of the searched key. We can obtain this behavior with the following implementation.
+This behavior aligns with the implementation of [binary search](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.binary_search) in the Rust Standard Library.
+However, it is often very useful to report the position of the first (or last) occurrence of the searched key. We can obtain this behavior with the following implementation.
 
 ```rust
 fn binary_search<T: Ord>(arr: &[T], key: T) -> Option<usize> {
@@ -86,6 +87,7 @@ fn binary_search<T: Ord>(arr: &[T], key: T) -> Option<usize> {
     ans
 }
 ```
+
 In this implementation, when a match is found, we do not immediately return its position.
 Instead, we update the `ans` variable and set `high` to the position of this occurrence.
 This way, we continue the search in the first half of the array, seeking additional occurrences of the `key`. If there are more matches, `ans` will be further updated with smaller positions.
@@ -214,3 +216,5 @@ fn select_intervals(intervals: &mut Vec<(usize, usize)>, c: usize) -> Option<usi
 - [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 - [Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)
+
+These notes are for the [*"Competitive Programming and Contests"*](/rossano/competitive/) course at Università di Pisa.
