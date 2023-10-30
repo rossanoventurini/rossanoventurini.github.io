@@ -138,6 +138,7 @@ I strongly suggest you to watch the following video lectures as soon as possible
 | 23/10/2023 | Segment Trees | Segment Tree: [description](https://en.wikipedia.org/wiki/Segment_tree), [tutorial 1](http://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range), [tutorial 2](https://codeforces.com/blog/entry/15890), [tutorial 3](https://cp-algorithms.com/data_structures/segment_tree.html), [video](https://www.youtube.com/watch?v=ZBHKZF5w4YU&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=22), and [visualgo](https://visualgo.net/en/segmenttree?slide=1). | Solve [**Nested segments**](http://codeforces.com/problemset/problem/652/D?locale=en) with Segment trees.|
 | 26/10/2023 | Segment trees: Applications |  | |
 | 30/10/2023 | Segment Trees: Lazy Propagation and Persistency | Lazy propagation: [tutorial](http://www.geeksforgeeks.org/lazy-propagation-in-segment-tree/) and [video](https://www.youtube.com/watch?v=xuoQdt5pHj0&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=23).| [Circular RMQ](http://codeforces.com/problemset/problem/52/C)|
+| 02/11/2023 | Mo's algorithm on sequences and trees |  [Rossano's notes\*](notes/MosAlgorithm.pdf). Mo's Algorithm: [Sequences](https://blog.anudeep2011.com/mos-algorithm/) and [Trees](http://codeforces.com/blog/entry/43230) |  [**Powerful array**](http://codeforces.com/contest/86/problem/D) and [Tree and queries](http://codeforces.com/contest/375/problem/D) |
 
 <br>
 #### Topics from past years
@@ -154,6 +155,7 @@ I strongly suggest you to watch the following video lectures as soon as possible
 | 2021 | Graph algorithms: BFS, DFS, and Topological Sort | [CCLR] Chapter 22 | [X total shapes](http://practice.geeksforgeeks.org/problems/x-total-shapes/0), [IsBipartite](http://practice.geeksforgeeks.org/problems/bipartite-graph/1), and [Fox and names](http://codeforces.com/problemset/problem/510/C?locale=en) |
 | 2021 | Graph algorithms: Strongly Connected Components and Single-Source Shortest Path| [CCLR] Chapters 22 and 23  | [Learning languages](http://codeforces.com/problemset/problem/277/A?locale=en) and [Checkposts](http://codeforces.com/problemset/problem/427/C?locale=en) |
 | 2019 | Graph algorithms: Minimum Spanning Tree (and Disjoint Sets data structures) |[CCLR] Chapters 21 and 23. Kruskal: [code](https://github.com/spaghetti-source/algorithm/blob/master/graph/kruskal.cc), Disjoint Set: [tutorial](https://www.topcoder.com/community/data-science/data-science-tutorials/disjoint-set-data-structures/) | [Minimum spanning tree](http://www.spoj.com/problems/MST/) |
+|2022 | Static RMQ with sparse table | RMQ and sparse table: [tutorial 1](http://www.geeksforgeeks.org/range-minimum-query-for-static-array/), [tutorial 2](https://cp-algorithms.com/sequences/rmq.html), [paper](http://www.ics.uci.edu/~eppstein/261/BenFar-LCA-00.pdf), and [code](https://github.com/spaghetti-source/algorithm/blob/master/data_structure/sparse_table.cc). [Static RMQ in 2n + o(n) bits and constant time](https://epubs.siam.org/doi/10.1137/090779759)(optional). | |
 
 <br>
 #### Further (optional) topics
