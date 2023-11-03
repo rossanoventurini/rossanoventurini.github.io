@@ -138,7 +138,7 @@ I strongly suggest you to watch the following video lectures as soon as possible
 | 23/10/2023 | Segment Trees | Segment Tree: [description](https://en.wikipedia.org/wiki/Segment_tree), [tutorial 1](http://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range), [tutorial 2](https://codeforces.com/blog/entry/15890), [tutorial 3](https://cp-algorithms.com/data_structures/segment_tree.html), [video](https://www.youtube.com/watch?v=ZBHKZF5w4YU&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=22), and [visualgo](https://visualgo.net/en/segmenttree?slide=1). | Solve [**Nested segments**](http://codeforces.com/problemset/problem/652/D?locale=en) with Segment trees.|
 | 26/10/2023 | Segment trees: Applications |  | |
 | 30/10/2023 | Segment Trees: Lazy Propagation and Persistency | Lazy propagation: [tutorial](http://www.geeksforgeeks.org/lazy-propagation-in-segment-tree/) and [video](https://www.youtube.com/watch?v=xuoQdt5pHj0&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=23).| [Circular RMQ](http://codeforces.com/problemset/problem/52/C)|
-| 02/11/2023 | Mo's algorithm on sequences and trees |  [Rossano's notes\*](notes/MosAlgorithm.pdf). Mo's Algorithm: [Sequences](https://blog.anudeep2011.com/mos-algorithm/) and [Trees](http://codeforces.com/blog/entry/43230) |  [**Powerful array**](http://codeforces.com/contest/86/problem/D) and [Tree and queries](http://codeforces.com/contest/375/problem/D) |
+| 02/11/2023 | Mo's algorithm on sequences and trees |  [Rossano's notes\*](/rossano/blog/2023/mosalgorithm). Optional: Mo's algorithm on [Trees](http://codeforces.com/blog/entry/43230) |  [**Powerful array**](http://codeforces.com/contest/86/problem/D) and [Tree and queries](http://codeforces.com/contest/375/problem/D) |
 
 <br>
 #### Topics from past years
