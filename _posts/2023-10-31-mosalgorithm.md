@@ -5,7 +5,7 @@ date: 2023-10-31 06:01:00
 description: The Mo's Algorithm is a powerful and efficient technique for solving a wide variety of range query problems. It becomes particularly useful for kind of queries where the use of a Segment Tree or similar data structures is not feasible.
 tags: rust, algorithms, data-structures
 categories: notes
-thumbnail: assets/img/mos/Mos_1.svg
+thumbnail: assets/img/mos/Mos_3.svg
 giscus_comments: true
 ---
 The *Mo's Algorithm* is a powerful and efficient technique for solving a wide variety of range query problems. It becomes particularly useful for kind of queries where the use of a Segment Tree or similar data structures is not feasible. This typically occurs when the query is non-associative, meaning that the result of a query on a range cannot be derived by combining the answers of the subranges that cover the original range.
@@ -16,27 +16,29 @@ Mo's algorithm tipically achieves a time complexity of $$O((n+q)\sqrt{n})$$, whe
 #### A Difficult Problem 
 Let's consider the following problem.
 
-*We are given an array $$A[1, n]$$ of integers and our goal is to solve $$q$$ queries `power` . For a query `power`(l,r) we have to compute some value for the subarray $$A[l, r]$$. For each integer $$s$$ within this subarray, let $$K_s$$ represent the number of occurrences. The subarray's power is defined as the sum of the products $$s \cdot K_s \cdot K_s$$ for every positive integer $$s$$ that appears in the subarray.*
+*We are given an array $$A[1, n]$$ of integers and our goal is to solve $$q$$ queries `power`. For a query `power(l,r)` we have to compute the "power" of the subarray $$A[l, r]$$. For each integer $$s$$ within this subarray, let $$K_s$$ represent the number of occurrences. The subarray's power is defined as the sum of the products $$s \cdot K_s \cdot K_s$$ for every positive integer $$s$$ that appears in the subarray.*
 
 Our goal is to achieve a time complexity of $$\Theta((n+q)\sqrt{n})$$ to solve all the $$q$$ queries. This may appear quite challenging, and you might even wondering where the factor $$\sqrt{n}$$ is coming from.
 
-For now, let's temporarily set aside the current problem and begin by introducing the Mo's algorithm with a simpler one. By the end of these notes, you'll be astonished at how straightforward the earlier problem becomes with the right algorithmic approach.
+For now, let's temporarily set aside the current problem and begin by introducing the Mo's algorithm with a simpler one. By the end of these notes, you'll be astonished at how straightforward this problem becomes with the right algorithmic tool.
 
 <br>
 #### A Easier Problem
 For many types of range queries, such as `RangeSum`, `RMQ`, `Distinct`, and others, there exist suitable data structures (like the Segment Tree) to answer queries efficiently and online.
-Solving a query online means that the data structure answers the query as soon as it is presented, without any delay. However, for some more complex query types, there are no online-efficient data structures available.
+Solving a query online means that the data structure answers the query as soon as it is presented, without any delay. However, for some more complex query types, there doesn't exist such online-efficient data structures.
 
-For certain types of queries, the most we can hope for is an algorithm that operates efficiently only when dealing with a sufficiently large batch of queries. Consequently, the time complexity of an individual query is low only in an amortized sense. The Mo's algorithm is one of these strategies. It ensures that if the batch consists of $$q = \Omega(n)$$ queries, each query can be resolved in $$\Theta(\sqrt{n})$$ amortized time.
+For certain query types, the best we can hope for is an efficient solution that works effectively only when handling a sufficiently large batch of queries. This way, the solution can process the queries in the order it deems most favorable.
+With such solutions, the time complexity of an individual query is low only in an amortized sense. 
+
+The Mo's algorithm is one of these strategies: if the batch consists of $$q = \Omega(n)$$ queries, each query can be solved in $$\Theta(\sqrt{n})$$ amortized time.
 
 Consider now the following problem.
 
-*We are given an array $$A[0,n-1]$$ consisting of colors, with each color represented by an integer within the range $$[0, n-1]$$. Additionally, we are given a set of $$q$$ range queries called `three_or_more`. The query `three_or_more`(l, r) aims to count the colors that occur at least three times within the subarray $$A[l, r]$$*
+*We are given an array $$A[0,n-1]$$ consisting of colors, with each color represented by an integer within $$[0, n-1]$$. Additionally, we are given a set of $$q$$ range queries called `three_or_more`. The query `three_or_more(l, r)` aims to count the colors that occur at least three times within the subarray $$A[l, r]$$.*
 
 Let's begin by examining a straightforward algorithm that addresses a query `three_or_more(l, r)` by scanning the subarray $$A[l, r]$$. The algorithm maintains an array of `counters` to track the number of occurrences of each color within the query range. Whenever a color reaches three occurrences, the `answer` is incremented by one.
 
-
-Below is a Rust implementation of this algorithm.
+Below is a Rust implementation of this strategy.
 
 ```rust
 pub fn three_or_more_slow(a: &[usize], queries: &[(usize, usize)]) -> Vec<usize> {
@@ -62,9 +64,9 @@ pub fn three_or_more_slow(a: &[usize], queries: &[(usize, usize)]) -> Vec<usize>
 }
 ```
 
-After each query, it's essential to reset the vector of counters. In the above implementation, this reset is achieved using the code snippet `a[l..=r].iter().for_each(|&color| counters[color] = 0)`. What's noteworthy is that this method selectively resets only the counters associated with colors within the queried subarray. This approach ensures that the time spent on resetting is directly proportional to the size of the queried range, rather than the length of `counters`. Consequently, this gives a better running time when dealing with short queried subarrays. However, that this minor optimization doesn't change the worst-case time complexity: *the algorithm remains still very slooooooow*.
+Observe that, after each query, it's essential to reset the vector of counters. In the above implementation, this reset is done using the code snippet `a[l..=r].iter().for_each(|&color| counters[color] = 0)`. What's noteworthy is that this method selectively resets only the counters associated with colors within the queried subarray. This approach ensures that the time spent on resetting is proportional to the size of the queried range, rather than the length of `counters`. Consequently, this gives a better running time when dealing with short queried subarrays. However, this minor optimization doesn't change the worst-case time complexity: *the algorithm is very slooooooow*.
 
-Indeed, it's evident that this algorithm has a time complexity of $\Theta(qn)$. The figure below illustrates an input that showcases the worst-case running time. We have $$n$$ queries. The first query range has a length of $$n$$ and spans the entire array. Then, the subsequent query ranges are each one unit shorter, until the last one, which has a length of one. The total length of these ranges is $$\Theta(n^2)$$, which is also the time complexity of the solution.
+Indeed, it's evident that it has a time complexity of $$\Theta(qn)$$. The figure below illustrates an input that showcases the worst-case running time. We have $$n$$ queries. The first query range has a length of $$n$$ and spans the entire array. Then, the subsequent query ranges are each one unit shorter, until the last one, which has a length of one. The total length of these ranges is $$\Theta(n^2)$$, which is also the time complexity of the solution.
 
 <div class="row mt-1">
     <div class="col-sm mt-3 mt-md-0">
@@ -77,7 +79,7 @@ Indeed, it's evident that this algorithm has a time complexity of $\Theta(qn)$. 
 #### Mo's algorithm
 Let's now introduce a different way to implementing the inefficent algorithm above. At first glance, this may appear to be just a more convoluted way of implementing the same strategy, seemingly offering no advantage in terms of worst-case running time. However, as we will see later on, we can achieve a  significantly improved time complexity just by strategically rearranging the queries.
 
-Suppose we have just answered the query for the range $$[l', r']$$ and are now addressing the query for the range $$[l, r]$$. Instead of starting from scratch, we can update the answer and the counters by adding or removing the contributions of colors that are in the new query range but not in the previous one, or vice versa. Specifically, for the left endpoints, we must remove all the colors in $$A[l', l-1]$$ if $$l' < l$$, or we need to add all the colors in $$A[l, l'-1]$$ if $$l < l'$$. The same principle applies to the right endpoints $$r$$ and $$r'$$.
+Suppose we have just answered the query for the range $$[l', r']$$ and are now addressing the query for the range $$[l, r]$$. Instead of starting from scratch, we can update the previous answer and counters by adding or removing the contributions of colors that are in the new query range but not in the previous one, or vice versa. Specifically, for the left endpoints, we must remove all the colors in $$A[l', l-1]$$ if $$l' < l$$, or we need to add all the colors in $$A[l, l'-1]$$ if $$l < l'$$. The same applies to the right endpoints $$r$$ and $$r'$$.
 
 The Rust implementation below utilizes two closures, `add` and `remove`, to keep `answer` and `counters` updated as we adjust the endpoints.
 
@@ -132,11 +134,11 @@ pub fn three_or_more(a: &[usize], queries: &[(usize, usize)]) -> Vec<usize> {
 }
 ```
 
-The time complexity of this algorithm remains $\Theta(qn)$. However, we observe that a query now executes more quickly if its range significantly overlaps with the range of the previous query.
+The time complexity of this algorithm remains $$\Theta(qn)$$. However, we observe that a query now executes more quickly if its range significantly overlaps with the range of the previous query.
 
-For example, the input in the figure above is no longer the worst-case for the new implementation. Conversely, it is actually a best-case as the implementation takes $\Theta(n)$ time. After spending linear time on the first query, any subsequent query is answered in constant time.
+This effect is perfectelly explained by the input of the previosu figure. This is input becomes a best-case for the new implementation as it takes $$\Theta(n)$$ time. Indeed, after spending linear time on the first query, any subsequent query is answered in constant time.
 
-We also observe that this implementation is highly sensitive to the ordering of the queries. It is enough to modify the ordering of the queries, as shown in the figure below, to revert to quadratic time. In the example below, we rearrange the queries from the figure above to alternate between a long and a short query. With this ordering, the new implementation again takes $\Theta(n^2)$ time.
+This implementation is highly sensitive to the ordering of the queries. It is enough to modify the ordering of the above queries, as shown in the figure below, to revert to quadratic time. In the example below, we rearrange the queries to alternate between a long and a short query. With this ordering, the new implementation takes $$\Theta(n^2)$$ time.
 
 <div class="row mt-1">
     <div class="col-sm mt-3 mt-md-0">
@@ -146,17 +148,23 @@ We also observe that this implementation is highly sensitive to the ordering of 
 
 These considerations lead to a question: *if we have a sufficient number of queries, can we rearrange them in a way that exploits the overlap between successive queries to gain an asymptotic advantage in the overall running time*?
 
-Mo’s algorithm answers positively this question by providing a reordering of the queries such that the time complexity reduces to $$\Theta((q+n)\sqrt{n})$$. Thus, we shave a factor $$\sqrt{n}$$ when $$q=\Omega(n)$$.
+Mo’s algorithm answers positively this question by providing a reordering of the queries such that the time complexity reduces to $$\Theta((q+n)\sqrt{n})$$.
 
 The idea is to conceptually partition the array $$A$$ into $$\sqrt{n}$$ buckets, each with a size of $$\sqrt{n}$$, named $$B_1, B_2, \ldots, B_{\sqrt{n}}$$. A query belongs to bucket $$B_k$$ if and only if its left endpoint $$l$$ falls into the $$k$$-th bucket, which can be expressed as $$\lfloor l/\sqrt{n} \rfloor = k$$.
 
 Initially, we group the queries based on their corresponding buckets, and within each bucket, the queries are solved in ascending order of their right endpoints.
 
-We now analyze the time complexity of the above algorithm with this query reordering.
+The figure shows this bucketing approach and the queries of one bucket sorted by their right endpoints.
 
-Let's concentrate on a specific bucket. As we process the queries in ascending order of their right endpoints, the index `cur_r` in the algorithm only increases from $$1$$ to $$n$$, moving a total of at most $$n$$ steps. On the other hand, the index `cur_l` can both increase and decrease but cannot move more than $$\sqrt{n}$$ steps per query. Thus, for a bucket with $$b$$ queries, the overall time to process its queries is $$\Theta(b\sqrt{n} + n)$$.
+<div class="row mt-1">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mos/Mos_3.svg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-Summing up over all buckets, the time complexity becomes Θ(q√n + n√n), which results in Θ(√n) amortized time per query when m = Ω(n)."
+Now, let's analyze the time complexity of the algorithm with this query reordering. It's sufficient to count the number of times we move the indexes `cur_l` and `cur_r`. This is because both `add` and `remove` take constant time, and, thus, the time complexity is proportional to the overall number of moves of these two indexes.
+
+Let's concentrate on a specific bucket. As we process the queries in ascending order of their right endpoints, the index `cur_r` moves a total of at most $$n$$ times. On the other hand, the index `cur_l` can both increase and decrease but, it is constrained within the bucket, and, thus, it cannot move more than $$\sqrt{n}$$ times per query. Thus, for a bucket with $$b$$ queries, the overall time to process its queries is $$\Theta(b\sqrt{n} + n)$$.
 
 Summing up over all buckets, the time complexity is $$\Theta(q\sqrt{n} + n\sqrt{n})$$, which results in $$\Theta(sqrt{n})$$ amortized time per query when $$m = \Omega(n)$$.
 
@@ -185,14 +193,14 @@ pub fn mos(a: &[usize], queries: &[(usize, usize)]) -> Vec<usize> {
 ```
 <br>
 #### The Difficult Problem Revisited
-As I promised, the challenging problem introduced above no longer seems that hard. Just use Mo's algorithm.
+As I promised, the challenging problem introduced above no longer seems that hard. Just use Mo's algorithm and a little bit of attention in updating the answer after a `add` or a `remove`.
 
 #### Final Consideration on Mo's Algorithm
 Mo's algorithm is an offline approach, which means we cannot use it when we are constrained to a specific order of queries or when update operations are involved.
 
 When implementing Mo's algorithm, the most challenging aspect is implementing the functions `add` and `remove`. There are query types for which these operations are not as straightforward as in previous problems and require the use of more advanced data structures than just an array of counters. One of these cases is the range minimum queries (*RMQ*).
 
-For RMQ, the addition and removal of an element needs maintaining the elements in the range within a Min-Heap, which increases the query time by a factor of $\log n$. Consequently, in this case, the amortized time per query is $\Theta(\sqrt{n}\log n)$, which is much worse than the ad hoc (and online) solution using a segment tree. This shouldn't come as a surprise, as ad hoc solutions that leverage specific properties of the problem at hand can often outperform general techniques like Mo's algorithm.
+For RMQ, the addition and removal of an element needs maintaining the elements in the range within a Min-Heap, which increases the query time by a factor of $$\log n$$. Consequently, in this case, the amortized time per query is $$\Theta(\sqrt{n}\log n)$$, which is much worse than the ad hoc (and online) solution using a segment tree. This shouldn't come as a surprise, as ad hoc solutions that leverage specific properties of the problem at hand can often outperform general techniques like Mo's algorithm.
 
 To conclude, let's consider an exercise that teaches the use of Mo's algorithm to solve queries on a tree.
 
@@ -202,4 +210,4 @@ To conclude, let's consider an exercise that teaches the use of Mo's algorithm t
 
 This problem can be solved in $$\Theta((m+n)\sqrt{n})$$ time with the Mo's algorithm. How?
 
-We should note that for this problem there exists a more advanced solution which runs in $$\Theta((n+q)\log n)$$ time. This solution uses to the [heavy-light decomposition](https://en.wikipedia.org/wiki/Heavy-light_decomposition) of the tree. How?
+We should note that for this problem there exists a more advanced solution which runs in $$\Theta((n+q)\log n)$$ time. This solution uses the [heavy-light decomposition](https://en.wikipedia.org/wiki/Heavy-light_decomposition) of the tree. How?
