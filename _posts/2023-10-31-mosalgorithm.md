@@ -191,10 +191,12 @@ pub fn mos(a: &[usize], queries: &[(usize, usize)]) -> Vec<usize> {
     permuted_answers
 }
 ```
+
 <br>
 #### The Difficult Problem Revisited
 As I promised, the challenging problem introduced above no longer seems that hard. Just use Mo's algorithm and a little bit of attention in updating the answer after a `add` or a `remove`.
 
+<br>
 #### Final Consideration on Mo's Algorithm
 Mo's algorithm is an offline approach, which means we cannot use it when we are constrained to a specific order of queries or when update operations are involved.
 
