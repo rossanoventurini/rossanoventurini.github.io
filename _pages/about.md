@@ -28,6 +28,7 @@ I love algorithms, data structures, low-level code optimizations, and Rust, ofte
 
 
 ### Awards
+- Best paper runner-up award at SIGIR 2024: 47th international ACM SIGIR conference on research & development in Information Retrieval
 - Best paper award at SIGIR 2015: 38th international ACM SIGIR conference on research & development in Information Retrieval
 - Best paper award at SIGIR 2014: 37th international ACM SIGIR conference on research & development in Information Retrieval
 - Yahoo Faculty Research and Engagement Program award ([FREP](https://research.yahoo.com/news/faculty-research-and-engagement-program-2014-recipients-selected/)), 2014
