@@ -26,7 +26,6 @@ I am an Associate Professor at the Computer Science Department, University of Pi
 
 I love algorithms, data structures, low-level code optimizations, and Rust, often all together at the same time.
 
-
 ### Awards
 - Best paper runner-up award at SIGIR 2024: 47th international ACM SIGIR conference on research & development in Information Retrieval
 - Best paper award at SIGIR 2015: 38th international ACM SIGIR conference on research & development in Information Retrieval

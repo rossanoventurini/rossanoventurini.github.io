@@ -11,8 +11,9 @@ nav_order:
 * CFU: 6
 * Period: First semester
 * Language: English
-* Classroom: [here](https://classroom.google.com/u/1/c/NTg5NjcxMzA0MDk4). Code is **y7q4c5w**
-* Lectures schedule: Monday 9-11 Room C1 and Thursday 9-11 Room C1 -- (Google Meet, link on our classroom)
+* Lectures schedule: Monday 16-18 Room C and Wednesday 14-16 Room C1
+* Telegram Group: [here](https://t.me/+GSwfAk2GOTI0OWVk)
+* Teams Group: [here](https://unipiit.sharepoint.com/:u:/r/sites/a__td_62957/SitePages/ClassHome.aspx?csf=1&web=1&share=ESRQ_rB4hadKroctiOt9OT4BCe_s0uFDS3qscGeXoZeaSw&e=grJtW6)
 * Question time: After lectures or by appointment
 
 <br>
@@ -125,7 +126,16 @@ I strongly suggest you to watch the following video lectures as soon as possible
 
 | Date | Lecture | References | Problems |
 | :------------ | :------------- | :------------ | :------------ |
-| 18/09/2023 | Introduction | [Slides](/rossano/assets/competitive/Introduction.pdf) | [Leaders in array](http://practice.geeksforgeeks.org/problems/leaders-in-an-array/0), **[Kadane's algorithm](https://leetcode.com/problems/maximum-subarray/)**, and [Missing number in array](https://leetcode.com/problems/missing-number/)|
+| 16/09/2024 | Introduction | [Slides](/rossano/assets/competitive/Introduction.pdf) | [Leaders in array](http://practice.geeksforgeeks.org/problems/leaders-in-an-array/0), **[Kadane's algorithm](https://leetcode.com/problems/maximum-subarray/)**, and [Missing number in array](https://leetcode.com/problems/missing-number/)|
+| 18/09/2024 | Introduction to Rust | [Slides](/rossano/assets/competitive/Rust_intro.pdf) | |
+
+
+<br><br>
+
+#### Last Year Lectures
+
+| Date | Lecture | References | Problems |
+| :------------ | :------------- | :------------ | :------------ |
 | 21/09/2023 | Solutions of Trapping rain water and Sliding window maximum | [Rossano's notes](/rossano/blog/2023/swm/) | **[Trapping rain water](https://leetcode.com/problems/trapping-rain-water/)** and [Sliding window maximum](https://leetcode.com/problems/sliding-window-maximum/)|
 | 25/09/2023 | Binary search | [Rossano's notes](/rossano/blog/2023/binarysearch/) and [USACO Guide](https://usaco.guide/silver/binary-search?lang=cpp) | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/), [Find the minimum in a rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), and **[Search for a peak in an (unsorted) array](https://leetcode.com/problems/find-peak-element/)** |
 | 02/10/2023 | Trees: representation, traversals, and Binary Search Tree| [Tree traversals](https://en.wikipedia.org/wiki/Tree_traversal) | [**Maximum path sum**](http://practice.geeksforgeeks.org/problems/maximum-path-sum/1)|
