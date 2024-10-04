@@ -7,13 +7,17 @@ nav: false
 nav_order:
 ---
 
+- [Information Retrieval](https://github.com/rossanoventurini/IR-unipi) [**English**]
+  - Dipartimento di Informatica, Università di Pisa
+  - a.a. 2024/25<br><br>
+
 - [Competitive Programming and Contests](/competitive/) [**English**]
   - Dipartimento di Informatica, Università di Pisa
-  - a.a. 2023/24, 2022/23, 2021/22, 2020/21, 2019/20, 2018/19, and 2017/18<br><br>
+  - a.a. 2024/25, 2023/24, 2022/23, 2021/22, 2020/21, 2019/20, 2018/19, and 2017/18<br><br>
 
 - [Algorithms and Data Structures (for Data Science)](https://github.com/rossanoventurini/adsds) [**English**]
   - Dipartimento di Informatica, Università di Pisa
-  - a.a. 2023/24, 2022/23, 2021/22 and 2020/21<br><br>
+  - a.a. 2024/25, 2023/24, 2022/23, 2021/22 and 2020/21<br><br>
 
 - [Algoritmica e Laboratorio](http://didawiki.cli.di.unipi.it/doku.php/informatica/all-a/start) [**Italian**]
   - Dipartimento di  Informatica, Università di Pisa
