@@ -156,7 +156,7 @@ pub fn closest_pair(points: &mut [(i64, i64)]) -> Option<i64> {
                 Included(&(point.0 - delta, min_y)),
                 Included(&(point.0 + delta, max_y)),
             ))
-            .filter(|p| p.0 - delta >= point.0)
+            .filter(|p| p.1 < point.1 - delta)
             .cloned()
             .collect();
 
