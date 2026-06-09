@@ -3,7 +3,7 @@ layout: post
 title:  Sweep Line Algorithm
 date: 2023-10-9 7:01:00
 description: The Sweep Line Algorithm is a powerful paradigm for solving a variety of problems in computational geometry. In these notes, we employ it to address problems both on a line and in a plane, providing Rust implementations for their solutions.
-tags: rust, algorithms, data-structures
+tags: [rust, algorithms, data-structures]
 categories: notes
 thumbnail: assets/img/SweepLine/MaxIntervalOverlaps_sweep.svg
 giscus_comments: true

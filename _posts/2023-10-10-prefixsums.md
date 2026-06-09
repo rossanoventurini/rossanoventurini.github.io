@@ -3,7 +3,7 @@ layout: post
 title: The Power of Prefix Sums 
 date: 2023-10-10 7:01:00
 description: Prefix sums offer an elegant and efficient solution to a variety of problems. In this notes, we showcase several such problems and provide their solutions with Rust implementations.
-tags: rust, algorithms, data-structures
+tags: [rust, algorithms, data-structures]
 categories: notes
 thumbnail: assets/img/prefixsums/Prefixsums_1.svg
 giscus_comments: true

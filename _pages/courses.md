@@ -9,19 +9,19 @@ nav_order:
 
 - [Information Retrieval](https://github.com/rossanoventurini/IR-unipi) [**English**]
   - Dipartimento di Informatica, Università di Pisa
-  - a.a. 2024/25<br><br>
+  - a.a. 2025/26, 2024/25<br><br>
 
 - [Competitive Programming and Contests](/competitive/) [**English**]
   - Dipartimento di Informatica, Università di Pisa
-  - a.a. 2024/25, 2023/24, 2022/23, 2021/22, 2020/21, 2019/20, 2018/19, and 2017/18<br><br>
+  - a.a. 2025/26, 2024/25, 2023/24, 2022/23, 2021/22, 2020/21, 2019/20, 2018/19, and 2017/18<br><br>
 
 - [Algorithms and Data Structures (for Data Science)](https://github.com/rossanoventurini/adsds) [**English**]
   - Dipartimento di Informatica, Università di Pisa
-  - a.a. 2024/25, 2023/24, 2022/23, 2021/22 and 2020/21<br><br>
+  - a.a. 2025/26, 2024/25, 2023/24, 2022/23, 2021/22 and 2020/21<br><br>
 
 - [Algoritmica e Laboratorio](http://didawiki.cli.di.unipi.it/doku.php/informatica/all-a/start) [**Italian**]
   - Dipartimento di  Informatica, Università di Pisa
-  - a.a. 2019/20, 2018/19, 2017/18, 2016/17, 2015/16, 2014/2015, 2013/2014, 2012/2013 e 2011/2012<br><br>
+  - a.a. 2019/20, 2018/19, 2017/18, 2016/17, 2015/16, 2014/15, 2013/14, 2012/13 e 2011/12<br><br>
 
 - Master in Big Data Analytics & Social Mining [**Italian**]
   - Dipartimento di Informatica, Università di Pisa.

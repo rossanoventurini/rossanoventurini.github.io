@@ -18,6 +18,7 @@ icon: favicon.png # the emoji used as the favicon (alternatively, provide image 
 
 url: https://pages.di.unipi.it # the base hostname & protocol for your site
 baseurl: /rossano # the subpath of your site, e.g. /blog/
+destination: /tmp/ross-site-build # OneDrive-backed folders can interrupt writes; use local temp output for builds
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -224,7 +225,6 @@ plugins:
   - jekyll-imagemagick
   - jekyll-jupyter-notebook
   - jekyll-link-attributes
-  - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll/scholar
   - jekyll-sitemap

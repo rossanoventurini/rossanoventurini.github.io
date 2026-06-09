@@ -3,7 +3,7 @@ layout: post
 title: Mo's Algorithm
 date: 2023-10-31 06:01:00
 description: The Mo's Algorithm is a powerful and efficient technique for solving a wide variety of range query problems. It becomes particularly useful for kind of queries where the use of a Segment Tree or similar data structures is not feasible.
-tags: rust, algorithms, data-structures
+tags: [rust, algorithms, data-structures]
 categories: notes
 thumbnail: assets/img/mos/Mos_3.svg
 giscus_comments: true
