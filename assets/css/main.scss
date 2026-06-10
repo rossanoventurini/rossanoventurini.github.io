@@ -1,0 +1,51 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }}
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/* ---------------------------------------------------------------------------
+   LOCAL OVERRIDE — not part of al_folio_core.
+   This file shadows the gem's assets/css/main.scss. The @use list above must be
+   kept in sync with the gem (al_folio_core) on every upgrade.
+
+   Fix: the deprecated bootstrap-compat layer (al_folio.compat.bootstrap) loads
+   AFTER tailwind.css and defines `.collapse{visibility:hidden}`, which the
+   desktop `.navbar-expand-sm .navbar-collapse{display:flex}` rule does NOT undo
+   (it restores display but not visibility). Result: on >= sm the navbar menu is
+   laid out but invisible. Restore visibility here (main.css loads after the
+   compat layer). Remove once bootstrap-compat is disabled (v2.0).
+--------------------------------------------------------------------------- */
+@media (min-width: 576px) {
+  .navbar-expand-sm .navbar-collapse {
+    visibility: visible !important;
+  }
+}
